@@ -1,7 +1,7 @@
 alias ls='ls -CFG'
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
-alias ll="ls -log"
+alias ll="ls -logh"
 alias rm="rm -i"
 alias rmdir="rm -ir"
 alias grep="grep -i"
@@ -44,8 +44,6 @@ source ~/.local/bin/bashmarks.sh
 
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
-export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
-
 # ruby 1.9
 eval "$(rbenv init -)"
 
@@ -64,6 +62,9 @@ export PATH=/Applications/android-sdk-macosx/platform-tools:$PATH
 export PATH="$PATH:/Applications/AraxisMerge.app/Utilities"
 
 alias ctags="`brew --prefix`/bin/ctags"
+
+alias t="todo.sh -nv"
+complete -F _todo t
 
 PS1="rossen@\w:"
 export PS1   
