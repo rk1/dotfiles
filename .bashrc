@@ -10,7 +10,6 @@ alias rmwin="rm -rf *RECYCLE*BIN* Thumbs.db"
 alias op="open"
 alias cl="clear"
 alias cll="clear; ll"
-alias pwdc="pwd | pbcopy"
 alias ..="cd .."
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -24,7 +23,6 @@ alias photoshop="open -a Adobe\ Photoshop\ CS6"
 alias lightroom="open -a Adobe\ Lightroom\ 3"
 alias vi="mvim"
 alias fw="open -a Adobe\ Fireworks\ CS6"
-alias tm="open -a textmate"
 alias ql="qlmanage -p"
 alias sf="open -a Safari"
 alias wr='open -a "iA Writer"'
@@ -40,15 +38,12 @@ alias acl="cd '/Volumes/Clients/'"
 alias ath="cd ~/Documents/athlon/"
 alias uni="cd ~/Documents/uni_and_stuff/"
 
-source ~/.local/bin/bashmarks.sh
-
 mkcd () { mkdir -p "$@" && cd "$@"; }
+
+source ~/.local/bin/bashmarks.sh
 
 # ruby 1.9
 eval "$(rbenv init -)"
-
-# svn 1.7
-export PATH=/usr/local/Cellar/subversion/1.7.5/bin:$PATH
 
 # git bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
@@ -59,7 +54,7 @@ fi
 export PATH=/Applications/android-sdk-macosx/platform-tools:$PATH
 
 # araxis command line tools
-export PATH="$PATH:/Applications/AraxisMerge.app/Utilities"
+export PATH=/Applications/AraxisMerge.app/Utilities:$PATH
 
 alias ctags="`brew --prefix`/bin/ctags"
 
