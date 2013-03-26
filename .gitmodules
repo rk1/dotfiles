@@ -7,6 +7,9 @@
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/vim-snipmate"]
+        path = .vim/bundle/vim-snipmate
+        url = git://github.com/garbas/vim-snipmate
 [submodule ".vim/bundle/snipmate-snippets"]
 	path = .vim/bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets
@@ -20,8 +23,8 @@
         path = .vim/bundle/taglist.vim
         url = git://github.com/vim-scripts/taglist.vim
 [submodule ".vim/bundle/tcomment_vim"]
-        path = .vim/bundle/tcomment_vim
-        url = git://github.com/tomtom/tcomment_vim
+	path = .vim/bundle/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
 [submodule ".vim/bundle/tlib_vim"]
         path = .vim/bundle/tlib_vim
         url = https://github.com/tomtom/tlib_vim
@@ -46,3 +49,33 @@
 [submodule ".vim/bundle/vim-textobj-user"]
         path = .vim/bundle/vim-textobj-user
         url = git://github.com/kana/vim-textobj-user
+[submodule ".vim/bundle/vim-indexed-search"]
+	path = .vim/bundle/vim-indexed-search
+	url = https://github.com/henrik/vim-indexed-search.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/tlib"]
+	path = .vim/bundle/tlib
+	url = https://github.com/vim-scripts/tlib
+[submodule ".vim/bundle/vim-cucumber"]
+	path = .vim/bundle/vim-cucumber
+	url = https://github.com/tpope/vim-cucumber.git
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule ".vim/bundle/vim-matchit"]
+	path = .vim/bundle/vim-matchit
+	url = https://github.com/tsaleh/vim-matchit.git
+[submodule ".vim/bundle/vim-rails"]
+	path = .vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-jsbeautify"]
+	path = .vim/bundle/vim-jsbeautify
+	url = https://github.com/maksimr/vim-jsbeautify.git

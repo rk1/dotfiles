@@ -28,8 +28,6 @@ let g:solarized_contrast="medium"
 let g:solarized_visibility="medium"
 let g:solarized_bold = 0
 call togglebg#map("<F5>")
-let g:vimroom_guibackground = '#fdf6e3'
-nnoremap <F4> :VimroomToggle<CR>
 
 " MacVim prefs
 if has("gui_macvim")
@@ -118,8 +116,8 @@ let g:ctrlp_prompt_mappings = {
 let g:ctrlp_map = '<c-p>'
 
 "indent 
-map   <silent> <leader>aa mmgg=G`m^zz
-imap   <silent> <leader>aa mmgg=G`m^zz
+map <silent> <leader>aa mmgg=G`m^zz
+imap <silent> <leader>aa mmgg=G`m^zz
 
 "put all swap files together in one place
 set directory^=$HOME/.swapsvim//
