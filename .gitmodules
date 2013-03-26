@@ -10,7 +10,39 @@
 [submodule ".vim/bundle/snipmate-snippets"]
 	path = .vim/bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets
-        
 [submodule ".vim/bundle/vim-jquery"]
 	path = .vim/bundle/vim-jquery
 	url = https://github.com/itspriddle/vim-jquery.git
+[submodule ".vim/bundle/supertab"]
+        path = .vim/bundle/supertab
+        url = git://github.com/ervandew/supertab
+[submodule ".vim/bundle/taglist.vim"]
+        path = .vim/bundle/taglist.vim
+        url = git://github.com/vim-scripts/taglist.vim
+[submodule ".vim/bundle/tcomment_vim"]
+        path = .vim/bundle/tcomment_vim
+        url = git://github.com/tomtom/tcomment_vim
+[submodule ".vim/bundle/tlib_vim"]
+        path = .vim/bundle/tlib_vim
+        url = https://github.com/tomtom/tlib_vim
+[submodule ".vim/bundle/vim-addon-mw-utils"]
+        path = .vim/bundle/vim-addon-mw-utils
+        url = https://github.com/MarcWeber/vim-addon-mw-utils
+[submodule ".vim/bundle/vim-colors-solarized"]
+        path = .vim/bundle/vim-colors-solarized
+        url = git://github.com/altercation/vim-colors-solarized
+[submodule ".vim/bundle/vim-numbertoggle"]
+        path = .vim/bundle/vim-numbertoggle
+        url = git://github.com/jeffkreeftmeijer/vim-numbertoggle
+[submodule ".vim/bundle/vim-ruby"]
+        path = .vim/bundle/vim-ruby
+        url = git://github.com/vim-ruby/vim-ruby
+[submodule ".vim/bundle/vim-seek"]
+        path = .vim/bundle/vim-seek
+        url = git://github.com/goldfeld/vim-seek
+[submodule ".vim/bundle/vim-textobj-rubyblock"]
+        path = .vim/bundle/vim-textobj-rubyblock
+        url = git://github.com/nelstrom/vim-textobj-rubyblock
+[submodule ".vim/bundle/vim-textobj-user"]
+        path = .vim/bundle/vim-textobj-user
+        url = git://github.com/kana/vim-textobj-user
