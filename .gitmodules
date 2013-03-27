@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/vim-snipmate"]
         path = .vim/bundle/vim-snipmate
         url = git://github.com/garbas/vim-snipmate
-[submodule ".vim/bundle/snipmate-snippets"]
-	path = .vim/bundle/snipmate-snippets
-	url = https://github.com/honza/snipmate-snippets
 [submodule ".vim/bundle/vim-jquery"]
 	path = .vim/bundle/vim-jquery
 	url = https://github.com/itspriddle/vim-jquery.git
@@ -84,3 +81,6 @@
 	path = .vim/bundle/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
         ignore = dirty
+[submodule ".vim/bundle/snipmate-snippets"]
+	path = .vim/bundle/snipmate-snippets
+	url = https://github.com/rk1/snipmate-snippets.git
