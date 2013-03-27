@@ -58,6 +58,7 @@
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = https://github.com/vim-scripts/tlib
+        ignore = dirty
 [submodule ".vim/bundle/vim-cucumber"]
 	path = .vim/bundle/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
