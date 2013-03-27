@@ -61,12 +61,6 @@ nnoremap <leader>w <C-w>v<C-w>l
 map ciq ci"
 map caq ca"
 
-"Use control-[hjkl] to select the active split
-nmap <silent> <c-k> :wincmd k<CR>                                                                                                                       
-nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
-nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
-nmap <silent> <c-l> :wincmd l<CR>
-
 "use system clipboard
 set clipboard=unnamed
 
@@ -135,3 +129,4 @@ map <Leader>r :w! <bar> !ruby %<CR>
 " Edit and reload .vimrc
 nmap <leader>vr :tabedit $MYVIMRC<CR>
 map <silent> <leader>vrr :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+

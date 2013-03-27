@@ -1,3 +1,4 @@
+# General
 alias ls='ls -CFG'
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
@@ -33,14 +34,12 @@ alias dsk="cd ~/Desktop/"
 alias doc="cd ~/Documents/"
 alias dw="cd ~/Downloads/"
 alias mov="cd ~/Movies/"
-alias vl="cd ~/../../Volumes/"
+alias vl="cd /Volumes/"
 alias acl="cd '/Volumes/Clients/'"
 alias ath="cd ~/Documents/athlon/"
 alias uni="cd ~/Documents/uni_and_stuff/"
 
 mkcd () { mkdir -p "$@" && cd "$@"; }
-
-source ~/.local/bin/bashmarks.sh
 
 # ruby 1.9
 eval "$(rbenv init -)"
@@ -50,16 +49,15 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-# android sdk
-export PATH=/Applications/android-sdk-macosx/platform-tools:$PATH
-
-# araxis command line tools
-export PATH=/Applications/AraxisMerge.app/Utilities:$PATH
-
 alias ctags="`brew --prefix`/bin/ctags"
 
 alias t="todo.sh -nv"
 complete -F _todo t
+
+source ~/.local/bin/bashmarks.sh
+
+# user bin
+export PATH=${HOME}/.bin:$PATH
 
 PS1="rossen@\w:"
 export PS1   
