@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/MAC/Documents/Athlon/skittles/skittles'
-let g:netrw_dirhist_2='/Users/MAC/Downloads/MVPVT/HTML'
-let g:netrw_dirhist_3='/Users/MAC/Documents/z_other_projects/MVPVT/HTML'
-let g:netrw_dirhist_4='/Users/MAC/Documents/Athlon/Smith&Williamson/HTML'
-let g:netrw_dirhist_5='/Users/MAC/Documents/Athlon/Southern_Water/Southern_Water_CCG_site/HTML'
-let g:netrw_dirhist_6='/Users/misa/Documents/railstest/students'
