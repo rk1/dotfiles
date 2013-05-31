@@ -41,10 +41,8 @@ alias ath="cd ~/Documents/athlon/"
 
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
-# ruby 1.9
 eval "$(rbenv init -)"
 
-# git bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
