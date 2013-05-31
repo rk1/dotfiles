@@ -38,7 +38,6 @@ alias mov="cd ~/Movies/"
 alias vl="cd /Volumes/"
 alias acl="cd '/Volumes/Clients/'"
 alias ath="cd ~/Documents/athlon/"
-alias uni="cd ~/Documents/uni_and_stuff/"
 
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
