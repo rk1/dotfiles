@@ -4,7 +4,6 @@ alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
 alias ll="ls -logh"
 alias rm="rm -i"
-alias rmdir="rm -ir"
 alias grep="grep -i"
 alias downcase="rename 'y/A-Z/a-z/' * -f"
 # annoying parallels leftovers
