@@ -90,6 +90,8 @@ nnoremap <expr> <F6> ':set isk' . (index(split(&isk, ','), '-') == -1 ? '+' : '-
 "add jquery snippets for js files as well
 au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
 
+map <leader>ff :call JsBeautify()<cr>
+
 "open file under cursor in a tab by default
 map gf <c-w>gf
 
