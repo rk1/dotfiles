@@ -46,8 +46,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-alias ctags="`brew --prefix`/bin/ctags"
-
 alias t="todo.sh -nv"
 complete -F _todo t
 
