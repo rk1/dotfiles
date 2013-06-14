@@ -46,13 +46,13 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
+# user bin
+export PATH=${HOME}/.bin:$PATH
+
 alias t="todo.sh -nv"
 complete -F _todo t
 
-source ~/.local/bin/bashmarks.sh
-
-# user bin
-export PATH=${HOME}/.bin:$PATH
+source ~/.bin/bashmarks.sh
 
 PS1="rossen@\w:"
 export PS1   
