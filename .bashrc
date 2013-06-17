@@ -19,7 +19,6 @@ alias newip="sudo ipconfig set en0 BOOTP;sudo ipconfig set en0 DHCP"
 
 # Applications
 alias f="open . -a finder"
-alias sk="open -a skype"
 alias photoshop="open -a Adobe\ Photoshop\ CS6"
 alias lightroom="open -a Adobe\ Lightroom\ 3"
 alias vi="mvim"
