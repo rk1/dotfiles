@@ -24,6 +24,7 @@ alias lightroom="open -a Adobe\ Lightroom\ 3"
 alias vi="mvim"
 alias fw="open -a Adobe\ Fireworks\ CS6"
 alias ql="qlmanage -p"
+alias cal='gcal --starting-day=1'
 alias sf="open -a Safari"
 alias wr='open -a "iA Writer"'
 alias vlc="open -a vlc"
