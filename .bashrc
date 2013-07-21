@@ -1,5 +1,11 @@
 # General
-alias ls='ls -CFG'
+if [[ $OSTYPE = darwin* ]]; then
+    export CLICOLOR=1
+    export LSCOLORS=dxfxcxdxbxegedabagacad
+    alias ls='ls -CFG'
+else
+    alias ls='ls -ACF --color=auto'
+fi
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
 alias ll="ls -logh"
@@ -56,10 +62,6 @@ source ~/.bin/bashmarks.sh
 
 PS1="rossen@\w:"
 export PS1   
-
-# ls colors
-export CLICOLOR=1
-export LSCOLORS=dxfxcxdxbxegedabagacad
 
 printf "\ec"
 
