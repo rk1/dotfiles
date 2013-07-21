@@ -4,7 +4,7 @@ if [[ $OSTYPE = darwin* ]]; then
     export LSCOLORS=dxfxcxdxbxegedabagacad
     alias ls='ls -CFG'
 else
-    alias ls='ls -ACF --color=auto'
+    alias ls='ls --color=auto'
 fi
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
