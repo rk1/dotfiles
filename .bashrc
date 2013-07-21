@@ -5,7 +5,7 @@ if [[ $OSTYPE = darwin* ]]; then
     alias ls='ls -CFG'
 else
     alias ls='ls --color=auto'
-    eval 'dircolors ~/.dircolors'
+    eval `dircolors ~/.dircolors`
 fi
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
