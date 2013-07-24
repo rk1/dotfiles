@@ -13,8 +13,6 @@ alias ll="ls -logh"
 alias rm="rm -i"
 alias grep="grep -i"
 alias downcase="rename 'y/A-Z/a-z/' * -f"
-# annoying parallels leftovers
-alias rmwin="rm -rf *RECYCLE*BIN* Thumbs.db"
 alias op="open"
 alias cl="clear"
 alias cll="clear; ll"
@@ -22,7 +20,6 @@ alias ..="cd .."
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias -- -='cd -'
-alias newip="sudo ipconfig set en0 BOOTP;sudo ipconfig set en0 DHCP"
 
 # Applications
 alias f="open . -a finder"
@@ -35,6 +32,8 @@ alias cal='gcal --starting-day=1'
 alias sf="open -a Safari"
 alias wr='open -a "iA Writer"'
 alias vlc="open -a vlc"
+# annoying parallels leftovers
+alias rmwin="rm -rf *RECYCLE*BIN* Thumbs.db"
 
 # Directories
 alias dsk="cd ~/Desktop/"
