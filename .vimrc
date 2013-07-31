@@ -103,13 +103,13 @@ let NERDTreeChDirMode=2
 
 "SuperTab
 let g:SuperTabDefaultCompletionType = "context"
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
 let g:ctrlp_prompt_mappings = {
             \ 'AcceptSelection("e")': ['<c-t>'],
             \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
             \ }
-
-"CtrlP
-let g:ctrlp_map = '<c-p>'
 
 "indent 
 map <silent> <leader>aa mmgg=G`m^zz
