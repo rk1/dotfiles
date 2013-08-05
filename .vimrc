@@ -1,4 +1,4 @@
-set nocompatible      " Running Vim, not Vi!
+set nocompatible
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -11,11 +11,11 @@ set autoindent
 set guioptions=aAce
 set modelines=0
 
-syntax on             " Enable syntax highlighting
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
+filetype on
+filetype indent on
+filetype plugin on
 filetype plugin indent on
+syntax on
 
 " Pathogen
 call pathogen#infect()
