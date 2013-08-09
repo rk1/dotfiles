@@ -1,6 +1,3 @@
-[submodule ".vim/bundle/fugitive"]
-	path = .vim/bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/vim-autoclose"]
 	path = .vim/bundle/vim-autoclose
 	url = git://github.com/Townk/vim-autoclose.git
@@ -51,9 +48,6 @@
 	path = .vim/bundle/tlib
 	url = https://github.com/vim-scripts/tlib
         ignore = dirty
-[submodule ".vim/bundle/vim-cucumber"]
-	path = .vim/bundle/vim-cucumber
-	url = https://github.com/tpope/vim-cucumber.git
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
