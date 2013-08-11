@@ -32,8 +32,6 @@ alias cal='gcal --starting-day=1'
 alias sf="open -a Safari"
 alias wr='open -a "iA Writer"'
 alias vlc="open -a vlc"
-# annoying parallels leftovers
-alias rmwin="rm -rf *RECYCLE*BIN* Thumbs.db"
 
 # Directories
 alias dsk="cd ~/Desktop/"
