@@ -13,3 +13,6 @@
     tool = araxis
 [diff] 
     tool = araxis
+[user]
+	email = rk1@example.com
+	name = rk1
