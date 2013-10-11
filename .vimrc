@@ -60,6 +60,10 @@ nnoremap <leader>w <C-w>v<C-w>l
 "faster quotes manipulation
 map ciq ci"
 map caq ca"
+"folding
+set foldmethod=indent
+set foldnestmax=2
+nnoremap <Space> za
 
 "use system clipboard
 set clipboard=unnamed
