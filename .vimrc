@@ -62,11 +62,12 @@ map ciq ci"
 map caq ca"
 "folding
 set foldmethod=indent
-set foldnestmax=2
 nnoremap <Space> za
 
 "use system clipboard
 set clipboard=unnamed
+set clipboard-=autoselect
+set guioptions-=a
 
 "cmd+number for tabs
 map <D-1> :tabn 1<CR>
