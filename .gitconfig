@@ -10,9 +10,18 @@
     st = status
     llog = "log --graph --decorate --oneline --abbrev-commit --all"
 [merge]
-    tool = araxis
+    tool = Kaleidoscope
 [diff] 
-    tool = araxis
+    tool = Kaleidoscope
 [user]
-	email = rk1@example.com
-	name = rk1
+    email = rk1@example.com
+    name = rk1
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false

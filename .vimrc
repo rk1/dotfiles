@@ -17,9 +17,37 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-" Pathogen
-call pathogen#infect()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Vundle
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Townk/vim-autoclose.git'
+Bundle 'garbas/vim-snipmate'
+Bundle 'itspriddle/vim-jquery'
+Bundle 'ervandew/supertab'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'goldfeld/vim-seek'
+Bundle 'henrik/vim-indexed-search'
+Bundle 'vim-scripts/tlib'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-repeat'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'Shutnik/jshint2.vim'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'rk1/snipmate-snippets'
+
 
 " Theme stuff
 set background=light
@@ -57,9 +85,6 @@ map <D-/> gcc
 :nmap <CR> G
 "new vert split and switch to it
 nnoremap <leader>w <C-w>v<C-w>l
-"faster quotes manipulation
-map ciq ci"
-map caq ca"
 "folding
 set foldmethod=indent
 nnoremap <Space> za
