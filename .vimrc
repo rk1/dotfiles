@@ -48,7 +48,6 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rk1/snipmate-snippets'
 
-
 " Theme stuff
 set background=light
 colorscheme solarized
@@ -72,7 +71,7 @@ set mousehide
 
 "use comma for a leader key
 let mapleader = ","
-"escape is too far 
+"escape is too far
 :imap jj <Esc>
 "a shift less
 nnoremap ; :
@@ -83,8 +82,6 @@ nnoremap _ <C-x>
 map <D-/> gcc
 "easier go to line
 :nmap <CR> G
-"new vert split and switch to it
-nnoremap <leader>w <C-w>v<C-w>l
 "folding
 set foldmethod=indent
 nnoremap <Space> za
@@ -125,12 +122,6 @@ map <leader>ff :call JsBeautify()<cr>
 "open file under cursor in a tab by default
 map gf <c-w>gf
 
-"NERDTree
-nmap <D-D> :execute 'NERDTreeToggle'<CR> 
-set autochdir
-let NERDTreeShowBookmarks=1
-let NERDTreeChDirMode=2
-
 "SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 
@@ -141,7 +132,7 @@ let g:ctrlp_prompt_mappings = {
             \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
             \ }
 
-"indent 
+"indent
 map <silent> <leader>aa mmgg=G`m^zz
 imap <silent> <leader>aa mmgg=G`m^zz
 
