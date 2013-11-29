@@ -11,6 +11,7 @@ alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
 alias ll="ls -logh"
 alias rm="rm -i"
+alias mv="mv -i"
 alias grep="grep -i"
 alias downcase="rename 'y/A-Z/a-z/' * -f"
 alias op="open"
