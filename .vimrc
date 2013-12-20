@@ -48,14 +48,6 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rk1/snipmate-snippets'
 
-" Theme stuff
-set background=light
-colorscheme solarized
-let g:solarized_contrast="medium"
-let g:solarized_visibility="medium"
-let g:solarized_bold = 0
-call togglebg#map("<F5>")
-
 " MacVim prefs
 if has("gui_macvim")
     set vb
@@ -64,6 +56,14 @@ if has("gui_macvim")
     set macmeta
     set guifont=Inconsolata:h17
     set linespace=4
+
+    " Theme stuff
+    set background=light
+    colorscheme solarized
+    let g:solarized_contrast="medium"
+    let g:solarized_visibility="medium"
+    let g:solarized_bold = 0
+    call togglebg#map("<F5>")
 endif
 
 " mouse stuff
