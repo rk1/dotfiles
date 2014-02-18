@@ -25,13 +25,12 @@ alias -- -='cd -'
 # Applications
 alias f="open . -a finder"
 alias photoshop="open -a Adobe\ Photoshop\ CS6"
-alias lightroom="open -a Adobe\ Lightroom\ 3"
 alias vi="mvim"
 alias fw="open -a Adobe\ Fireworks\ CS6"
 alias ql="qlmanage -p"
 alias cal='gcal --starting-day=1'
 alias sf="open -a Safari"
-alias wr='open -a "iA Writer"'
+alias wr='open -a "Writer Pro"'
 alias vlc="open -a vlc"
 
 # Directories
@@ -53,9 +52,6 @@ fi
 
 # user bin
 export PATH=${HOME}/.bin:$PATH
-
-alias t="todo.sh -nv"
-complete -F _todo t
 
 source ~/.bin/bashmarks.sh
 

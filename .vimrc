@@ -54,17 +54,17 @@ if has("gui_macvim")
     set fuoptions=maxvert,maxhorz
     au GUIEnter * set fullscreen
     set macmeta
-    set guifont=Inconsolata:h17
+    set guifont=Inconsolata:h18
     set linespace=4
-
-    " Theme stuff
-    set background=light
-    colorscheme solarized
-    let g:solarized_contrast="medium"
-    let g:solarized_visibility="medium"
-    let g:solarized_bold = 0
-    call togglebg#map("<F5>")
 endif
+
+" Theme stuff
+set background=light
+colorscheme solarized
+let g:solarized_contrast="medium"
+let g:solarized_visibility="medium"
+let g:solarized_bold = 0
+call togglebg#map("<F5>")
 
 " mouse stuff
 set mousehide
