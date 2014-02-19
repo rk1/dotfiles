@@ -102,6 +102,10 @@ map <D-7> :tabn 7<CR>
 map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
 
+
+map <D-[> :bprevious<CR>
+map <D-]> :bnext<CR>
+
 "TextMate-like cmd+enter
 imap <D-CR> <Esc>o
 imap <D-S-CR> <Esc>O
@@ -128,8 +132,8 @@ let g:SuperTabDefaultCompletionType = "context"
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_prompt_mappings = {
-            \ 'AcceptSelection("e")': ['<c-t>'],
-            \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+            \ 'AcceptSelection("e")': ['<cr>'],
+            \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
             \ }
 
 "indent
