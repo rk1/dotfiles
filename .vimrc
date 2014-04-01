@@ -11,9 +11,6 @@ set autoindent
 set guioptions=aAce
 set modelines=0
 
-filetype on
-filetype indent on
-filetype plugin on
 filetype plugin indent on
 syntax on
 
@@ -41,7 +38,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
-Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/matchit.zip'
 Bundle 'Shutnik/jshint2.vim'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'kana/vim-textobj-user'
@@ -68,7 +65,6 @@ call togglebg#map("<F5>")
 
 " mouse stuff
 set mousehide
-
 "use comma for a leader key
 let mapleader = ","
 "escape is too far
@@ -102,10 +98,6 @@ map <D-7> :tabn 7<CR>
 map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
 
-
-map <D-[> :bprevious<CR>
-map <D-]> :bnext<CR>
-
 "TextMate-like cmd+enter
 imap <D-CR> <Esc>o
 imap <D-S-CR> <Esc>O
@@ -118,8 +110,10 @@ inoremap (<cr> (<cr>)<c-o>O<tab>
 set iskeyword=@,48-57,_,192-255,#,-
 nnoremap <expr> <F6> ':set isk' . (index(split(&isk, ','), '-') == -1 ? '+' : '-') . '=-<cr>:set iskeyword?<cr>'
 
-"add jquery snippets for js files as well
+"filetype/syntax for other files
 au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
+au BufNewFile,BufRead *.es6 set filetype=javascript
+au BufNewFile,BufRead *.hbs set filetype=html
 
 map <leader>ff :call JsBeautify()<cr>
 
@@ -131,22 +125,23 @@ let g:SuperTabDefaultCompletionType = "context"
 
 "CtrlP
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_root_markers = ['app.js']
 let g:ctrlp_prompt_mappings = {
-            \ 'AcceptSelection("e")': ['<cr>'],
-            \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
-            \ }
+    \ 'AcceptSelection("e")': ['<cr>'],
+    \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
+\}
 
 "indent
 map <silent> <leader>aa mmgg=G`m^zz
 imap <silent> <leader>aa mmgg=G`m^zz
 
-"put all swap files together in one place
-set directory^=$HOME/.swapsvim//
-
 "better html li indent
-:let g:html_indent_inctags = "li,ul"
+let g:html_indent_inctags = "li,ul"
 "open html in safari
 nmap <leader>sf :!open % -a Safari<CR><CR>
+
+"put all swap files together in one place
+set directory^=$HOME/.swapsvim/
 
 "ruby
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
