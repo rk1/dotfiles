@@ -7,6 +7,7 @@ else
     alias ls='ls --color=auto'
     eval `dircolors ~/.dircolors`
 fi
+
 alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
 alias ll="ls -logh"
@@ -50,13 +51,8 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-# user bin
-export PATH=${HOME}/.bin:$PATH
-
 source ~/.bin/bashmarks.sh
 
 PS1="rossen@\w:"
 export PS1   
-
-printf "\ec"
 
