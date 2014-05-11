@@ -13,6 +13,8 @@ alias li='ls -hAlFiG'
 alias ll="ls -logh"
 alias rm="rm -i"
 alias mv="mv -i"
+alias du="du -hs"
+alias df="df -h"
 alias grep="grep -i"
 alias downcase="rename 'y/A-Z/a-z/' * -f"
 alias op="open"
@@ -26,7 +28,7 @@ alias -- -='cd -'
 # Applications
 alias f="open . -a finder"
 alias photoshop="open -a Adobe\ Photoshop\ CS6"
-alias vi="mvim"
+alias vi="mvim --remote-tab-silent"
 alias fw="open -a Adobe\ Fireworks\ CS6"
 alias ql="qlmanage -p"
 alias cal='gcal --starting-day=1'
