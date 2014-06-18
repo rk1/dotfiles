@@ -45,6 +45,20 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rk1/snipmate-snippets'
 
+
+" Theme stuff
+if has("gui_running")
+    set background=light
+    colorscheme solarized
+    let g:solarized_contrast="medium"
+    let g:solarized_visibility="medium"
+    let g:solarized_bold = 0
+    call togglebg#map("<F5>")
+    set guifont=Inconsolata\ 15
+    " toggle menu
+    nnoremap <A-m> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+endif
+
 " MacVim prefs
 if has("gui_macvim")
     set vb
@@ -54,14 +68,6 @@ if has("gui_macvim")
     set guifont=Inconsolata:h18
     set linespace=4
 endif
-
-" Theme stuff
-set background=light
-colorscheme solarized
-let g:solarized_contrast="medium"
-let g:solarized_visibility="medium"
-let g:solarized_bold = 0
-call togglebg#map("<F5>")
 
 " mouse stuff
 set mousehide
