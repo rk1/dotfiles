@@ -34,6 +34,7 @@ Bundle 'goldfeld/vim-seek'
 Bundle 'henrik/vim-indexed-search'
 Bundle 'vim-scripts/tlib'
 Bundle 'pangloss/vim-javascript'
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
@@ -148,6 +149,9 @@ nmap <leader>sf :!open % -a Safari<CR><CR>
 
 "put all swap files together in one place
 set directory^=$HOME/.swapsvim/
+
+"mustache
+let g:mustache_abbreviations = 1
 
 "ruby
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
