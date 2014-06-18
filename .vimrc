@@ -82,7 +82,8 @@ nnoremap ; :
 nnoremap + <C-a>
 nnoremap _ <C-x>
 "map comment key
-map <D-/> gcc
+map <D-/> :TComment<CR>
+map <leader>c :TComment<CR>
 "easier go to line
 :nmap <CR> G
 "folding
