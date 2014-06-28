@@ -48,12 +48,11 @@ alias ath="cd ~/Documents/athlon/"
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
+if [ -f ~/.bin/bashmarks.sh ]; then source ~/.bin/bashmarks.sh; fi
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
-
-source ~/.bin/bashmarks.sh
 
 PS1="\u@\w:"
 export PS1   
