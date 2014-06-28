@@ -47,7 +47,7 @@ alias ath="cd ~/Documents/athlon/"
 
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
-eval "$(rbenv init - --no-rehash)"
+if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
