@@ -133,7 +133,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 "CtrlP
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_root_markers = ['app.js']
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(git|svn))$'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<cr>'],
     \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
