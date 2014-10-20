@@ -3,6 +3,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set number
+set relativenumber
 set cindent
 set smartindent
 set ignorecase
@@ -28,7 +29,6 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'goldfeld/vim-seek'
 Bundle 'henrik/vim-indexed-search'
@@ -132,8 +132,7 @@ map gf <c-w>gf
 let g:SuperTabDefaultCompletionType = "context"
 
 "CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|dist|tmp|vendor)|(\.(git|svn))$'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<cr>'],
     \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
