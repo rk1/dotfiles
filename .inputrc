@@ -5,6 +5,4 @@ set keymap vi
 set keymap vi-insert
 "jj":"\e"
 
-$if Bash
-    "\C-l": "\e\C-la"
-$endif
+Control-l: clear-screen
