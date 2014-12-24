@@ -137,6 +137,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<cr>'],
     \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
 \}
+let g:ctrlp_use_caching = 0
 
 "indent
 map <silent> <leader>aa mmgg=G`m^zz
