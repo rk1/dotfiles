@@ -1,6 +1,7 @@
 set bell-style none
 set editing-mode vi
 set keymap vi
+set completion-ignore-case On
 
 set keymap vi-insert
 "jj":"\e"
