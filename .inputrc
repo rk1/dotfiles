@@ -2,8 +2,11 @@ set bell-style none
 set editing-mode vi
 set keymap vi
 set completion-ignore-case On
+set completion-display-width 1
 
 set keymap vi-insert
 "jj":"\e"
 
 Control-l: clear-screen
+Control-p: history-search-backward
+Control-n: history-search-forward
