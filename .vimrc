@@ -11,6 +11,7 @@ set smartcase
 set autoindent
 set guioptions=aAce
 set modelines=0
+set ff=unix
 
 filetype plugin indent on
 syntax on
