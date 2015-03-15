@@ -9,6 +9,7 @@
     ci = commit
     st = status
     llog = "log --graph --decorate --oneline --abbrev-commit --all"
+    di = "diff -b"
 [merge]
     tool = Kaleidoscope
 [diff] 
