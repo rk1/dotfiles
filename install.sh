@@ -5,6 +5,7 @@
 H=(\
     .bashrc						\
     .aliases						\
+    .colors						\
     .gitconfig						\
     .inputrc						\
     .vim						\
