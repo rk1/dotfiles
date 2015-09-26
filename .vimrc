@@ -91,6 +91,8 @@ map <leader>c :TComment<CR>
 "folding
 set foldmethod=indent
 nnoremap <Space> za
+"change to current directory
+nnoremap ,cd :cd %:p:h<CR>
 "yank to end of line
 noremap Y y$
 
@@ -154,7 +156,7 @@ let g:ctrlp_root_markers = ['package.json']
 
 "Statusline
 set laststatus=2
-set statusline+=%F%m%=%P
+set statusline+=%f%m%=%P
 hi statusline guibg=#7c7b82 ctermfg=6 guifg=#fdf6e3 ctermbg=0
 
 "indent
