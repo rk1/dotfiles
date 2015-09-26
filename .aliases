@@ -30,5 +30,24 @@ alias dw="cd ~/Downloads/"
 alias mov="cd ~/Movies/"
 alias vl="cd /Volumes/"
 
+alias ga='git add -A'
+alias gl='git llog'
+alias glog='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gdi='git di'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gb='git branch'
+alias go='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gps='git push'
+alias gpl='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+ 
+
 mkcd () { mkdir -p "$@" && cd "$@"; }
 

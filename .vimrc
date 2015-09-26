@@ -32,7 +32,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'goldfeld/vim-seek'
-Bundle 'henrik/vim-indexed-search'
+Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/tlib'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mustache/vim-mustache-handlebars'
@@ -46,6 +46,7 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rk1/snipmate-snippets'
+
 
 
 " Theme stuff
@@ -90,6 +91,8 @@ map <leader>c :TComment<CR>
 "folding
 set foldmethod=indent
 nnoremap <Space> za
+"yank to end of line
+noremap Y y$
 
 "use system clipboard
 set clipboard=unnamed
@@ -106,6 +109,11 @@ map <D-6> :tabn 6<CR>
 map <D-7> :tabn 7<CR>
 map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
+
+"prev/next tab
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
 
 "TextMate-like cmd+enter
 imap <D-CR> <Esc>o
@@ -131,14 +139,23 @@ map gf <c-w>gf
 
 "SuperTab
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabCrMapping = 1
 
 "CtrlP
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|dist|tmp|vendor)|(\.(git|svn))$'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<cr>'],
     \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
+    \ 'PrtSelectMove("j")':   ['<c-j>', '<c-n>'],
+    \ 'PrtSelectMove("k")':   ['<c-k>', '<c-p>'],
 \}
 let g:ctrlp_use_caching = 0
+let g:ctrlp_root_markers = ['package.json']
+
+"Statusline
+set laststatus=2
+set statusline+=%F%m%=%P
+hi statusline guibg=#7c7b82 ctermfg=6 guifg=#fdf6e3 ctermbg=0
 
 "indent
 map <silent> <leader>aa mmgg=G`m^zz
