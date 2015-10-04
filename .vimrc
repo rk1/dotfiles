@@ -147,7 +147,7 @@ let g:SuperTabCrMapping = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|dist|tmp|vendor)|(\.(git|svn))$'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<cr>'],
-    \ 'AcceptSelection("t")': ['<D-cr>', '<2-LeftMouse>'],
+    \ 'AcceptSelection("t")': ['<D-cr>', '<c-t>'],
     \ 'PrtSelectMove("j")':   ['<c-j>', '<c-n>'],
     \ 'PrtSelectMove("k")':   ['<c-k>', '<c-p>'],
 \}
