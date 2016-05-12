@@ -2,6 +2,7 @@ alias la='ls -hAlFiG'
 alias li='ls -hAlFiG'
 alias ll="ls -logh"
 alias rm="rm -i"
+alias rmrf="rm -rf"
 alias mv="mv -i"
 alias du="du -hs"
 alias df="df -h"
