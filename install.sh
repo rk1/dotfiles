@@ -4,6 +4,7 @@
 
 H=(\
     .bashrc						\
+    .zshrc						\
     .aliases						\
     .colors						\
     .gitconfig						\
