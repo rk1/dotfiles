@@ -41,6 +41,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'scrooloose/syntastic'
 Bundle 'Shutnik/jshint2.vim'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'kana/vim-textobj-user'
@@ -153,6 +154,14 @@ let g:ctrlp_prompt_mappings = {
 \}
 let g:ctrlp_use_caching = 0
 let g:ctrlp_root_markers = ['package.json']
+
+"syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 "Statusline
 set laststatus=2
