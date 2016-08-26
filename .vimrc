@@ -35,6 +35,7 @@ Bundle 'goldfeld/vim-seek'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/tlib'
 Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
@@ -58,7 +59,6 @@ if has("gui_running")
     let g:solarized_visibility="medium"
     let g:solarized_bold = 0
     call togglebg#map("<F5>")
-    set guifont=Inconsolata\ 15
     " toggle menu
     nnoremap <A-m> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 endif
@@ -156,11 +156,19 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_root_markers = ['package.json']
 
 "syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 8
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['html', 'hbs'] }
+
 nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 "Statusline
@@ -186,6 +194,7 @@ let g:mustache_abbreviations = 1
 "ruby
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 map <Leader>r :w! <bar> !ruby %<CR>
 
 " Edit and reload .vimrc
