@@ -36,6 +36,7 @@ Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/tlib'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
+Bundle 'flowtype/vim-flow'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
@@ -143,7 +144,11 @@ au BufRead,BufNewFile *.js set filetype=javascript.jsx
 au BufNewFile,BufRead *.es6 set filetype=javascript
 au BufNewFile,BufRead *.hbs set filetype=html
 
+"jsx
 let g:jsx_pragma_required = 1
+
+"flow
+let g:flow#autoclose = 1
 
 map <leader>ff :call JsBeautify()<cr>
 
@@ -190,8 +195,8 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['html', 'hbs'] }
 
 nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-nnoremap <C-a> :NERDTreeFind<CR>
-nnoremap <C-s> :NERDTreeToggle<CR>
+nnoremap <C-s> :NERDTreeFind<CR>
+nnoremap <C-a> :NERDTreeToggle<CR>
 
 "Statusline
 set laststatus=2
