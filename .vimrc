@@ -27,7 +27,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'ervandew/supertab'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'tomtom/tlib_vim'
+Bundle 'scrooloose/nerdtree'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-ruby/vim-ruby'
@@ -114,9 +114,17 @@ map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
 
 "prev/next tab
-nnoremap <C-j> :tabprevious<CR>
-nnoremap <C-k> :tabnext<CR>
+" nnoremap <C-j> :tabprevious<CR>
+" nnoremap <C-k> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
+
+"splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
 
 "TextMate-like cmd+enter
 imap <D-CR> <Esc>o
@@ -131,9 +139,11 @@ set iskeyword=@,48-57,_,192-255,#,-
 nnoremap <expr> <F6> ':set isk' . (index(split(&isk, ','), '-') == -1 ? '+' : '-') . '=-<cr>:set iskeyword?<cr>'
 
 "filetype/syntax for other files
-au BufRead,BufNewFile *.js set ft=javascript syntax=jquery
+au BufRead,BufNewFile *.js set filetype=javascript.jsx
 au BufNewFile,BufRead *.es6 set filetype=javascript
 au BufNewFile,BufRead *.hbs set filetype=html
+
+let g:jsx_pragma_required = 1
 
 map <leader>ff :call JsBeautify()<cr>
 
@@ -180,6 +190,8 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['html', 'hbs'] }
 
 nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+nnoremap <C-a> :NERDTreeFind<CR>
+nnoremap <C-s> :NERDTreeToggle<CR>
 
 "Statusline
 set laststatus=2
@@ -204,7 +216,9 @@ let g:mustache_abbreviations = 1
 "ruby
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
 map <Leader>r :w! <bar> !ruby %<CR>
 
 " Edit and reload .vimrc
