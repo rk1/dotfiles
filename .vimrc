@@ -92,6 +92,7 @@ map <leader>c :TComment<CR>
 :nmap <CR> G
 "folding
 set foldmethod=indent
+set foldlevelstart=99
 nnoremap <Space> za
 "change to current directory
 nnoremap ,cd :cd %:p:h<CR>
