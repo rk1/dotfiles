@@ -70,7 +70,7 @@ if has("gui_macvim")
     set fuoptions=maxvert,maxhorz
     au GUIEnter * set fullscreen
     set macmeta
-    set guifont=Inconsolata:h18
+    set guifont=Operator\ Mono\ Book:h17
     set linespace=4
 endif
 
