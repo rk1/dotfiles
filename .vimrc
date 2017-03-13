@@ -27,6 +27,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'ervandew/supertab'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'scrooloose/nerdtree'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'altercation/vim-colors-solarized'
@@ -49,7 +50,6 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'rk1/snipmate-snippets'
-
 
 
 " Theme stuff
