@@ -38,11 +38,6 @@ nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 nnoremap <C-s> :NERDTreeFind<CR>
 nnoremap <C-a> :NERDTreeToggle<CR>
 
-"Statusline
-set laststatus=2
-set statusline+=%f%m%=%P
-hi statusline guibg=#7c7b82 ctermfg=6 guifg=#fdf6e3 ctermbg=0
-
 "jsx
 let g:jsx_pragma_required = 1
 
