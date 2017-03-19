@@ -38,6 +38,12 @@ nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 nnoremap <C-s> :NERDTreeFind<CR>
 nnoremap <C-a> :NERDTreeToggle<CR>
 
+"ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+nnoremap <Leader>a :Ack
+
 "jsx
 let g:jsx_pragma_required = 1
 
