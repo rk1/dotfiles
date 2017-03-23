@@ -10,9 +10,6 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 "use prettier as a javascript formatter
 autocmd FileType javascript set formatprg=prettier\ --stdin
 
-"js beautify
-map <leader>ff :call JsBeautify()<cr>
-
 "better html li indent
 let g:html_indent_inctags = "li,ul"
 
