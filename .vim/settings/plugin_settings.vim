@@ -42,7 +42,7 @@ nnoremap <C-a> :NERDTreeToggle<CR>
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-nnoremap <Leader>a :Ack
+nnoremap <Leader>a :Ack!
 
 "jsx
 let g:jsx_pragma_required = 1
