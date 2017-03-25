@@ -51,14 +51,14 @@ let g:jsx_pragma_required = 1
 let g:flow#autoclose = 1
 
 "Neoformat
-
-let g:neoformat_javascript_prettier = {
-    \ 'exe': 'prettier',
-    \ 'args': ['--print-width 100', '--single-quote', '--stdin', '--trailing-comma all'],
-    \ 'stdin': 1,
-    \ }
+ let g:neoformat_javascript_prettier = {
+     \ 'exe': 'prettier',
+     \ 'args': ['--print-width 100', '--single-quote', '--stdin', '--trailing-comma all'],
+     \ 'stdin': 1,
+     \ }
 
 let g:neoformat_enabled_javascript = ['prettier']
 
 map <leader>ff :Neoformat<cr>
+autocmd BufWritePre *.js Neoformat
 
