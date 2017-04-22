@@ -47,7 +47,7 @@ nnoremap <leader>gd :!git diff<CR>
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-nnoremap <Leader>a :Ack!
+nnoremap <C-f> :Ack!
 
 "jsx
 let g:jsx_pragma_required = 1
