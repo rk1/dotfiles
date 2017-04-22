@@ -1,8 +1,6 @@
-if has("gui_running")
-    set background=light
-    colorscheme solarized
-    call togglebg#map("<F5>")
-endif
+set background=light
+colorscheme solarized
+call togglebg#map("<F5>")
 
 " MacVim prefs
 if has("gui_macvim")
