@@ -39,6 +39,10 @@ nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 nnoremap <C-s> :NERDTreeFind<CR>
 nnoremap <C-a> :NERDTreeToggle<CR>
 
+"fugitive & git
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :!git diff<CR>
+
 "ack
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
