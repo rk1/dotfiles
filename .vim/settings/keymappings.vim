@@ -58,9 +58,6 @@ inoremap (<cr> (<cr>)<c-o>O<tab>
 set iskeyword=@,48-57,_,192-255,#,-
 nnoremap <expr> <F6> ':set isk' . (index(split(&isk, ','), '-') == -1 ? '+' : '-') . '=-<cr>:set iskeyword?<cr>'
 
-"open file under cursor in a tab by default
-map gf <c-w>gf
-
 "indent
 map <silent> <leader>aa mmgg=G`m^zz
 imap <silent> <leader>aa mmgg=G`m^zz
