@@ -38,11 +38,6 @@ map <D-7> :tabn 7<CR>
 map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
 
-"prev/next tab
-" nnoremap <C-j> :tabprevious<CR>
-" nnoremap <C-k> :tabnext<CR>
-nnoremap <C-t> :tabnew<CR>
-
 "splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
