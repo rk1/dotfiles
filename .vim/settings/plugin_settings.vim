@@ -4,6 +4,7 @@ let g:SuperTabCrMapping = 1
 
 "CtrlP
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|dist|tmp|vendor)|(\.(git|svn))$'
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<cr>'],
     \ 'AcceptSelection("t")': ['<D-cr>', '<c-t>'],
