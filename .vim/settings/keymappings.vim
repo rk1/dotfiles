@@ -35,9 +35,6 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-"TextMate-like cmd+enter
-imap <D-CR> <Esc>o
-imap <D-S-CR> <Esc>O
 "TextMate-like braces
 inoremap {<cr> {<cr>}<c-o>O
 inoremap [<cr> [<cr>]<c-o>O<tab>
