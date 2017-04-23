@@ -3,7 +3,6 @@ call vundle#rc()
 
 " Vundle
 Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
 Bundle 'Townk/vim-autoclose.git'
 Bundle 'garbas/vim-snipmate'
 Bundle 'tpope/vim-fugitive'
@@ -18,7 +17,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'goldfeld/vim-seek'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/tlib'
-Bundle 'mileszs/ack.vim'
+Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Bundle 'junegunn/fzf.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'flowtype/vim-flow'
