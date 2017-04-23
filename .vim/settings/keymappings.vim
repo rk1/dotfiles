@@ -52,6 +52,6 @@ map <silent> <leader>aa mmgg=G`m^zz
 imap <silent> <leader>aa mmgg=G`m^zz
 
 " Edit and reload .vimrc
-nmap <leader>vr :tabedit $MYVIMRC<CR>
+nmap <leader>vr :ex ~/.vim/settings/<CR>
 map <silent> <leader>vrr :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
