@@ -35,6 +35,9 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+"buffers
+map gp :e#<cr>
+
 "TextMate-like braces
 inoremap {<cr> {<cr>}<c-o>O
 inoremap [<cr> [<cr>]<c-o>O<tab>
