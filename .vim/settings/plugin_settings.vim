@@ -22,11 +22,12 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :!git diff<CR>
 
 "fzf
-nnoremap <C-f> :Ag<Space>
-nnoremap <C-p> :Files<cr>
-let g:fzf_colors = {
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn']}
+nnoremap <C-p> :FZF<CR>
+nnoremap <C-f> :Ag<CR>
+nnoremap <C-b> :Buffers<CR>
+let g:fzf_action = {
+      \ 'ctrl-o': 'open' }
+let g:fzf_layout = { 'down': '~25%' }
 
 "jsx
 let g:jsx_pragma_required = 1
