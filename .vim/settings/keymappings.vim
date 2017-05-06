@@ -21,9 +21,6 @@ map <leader>c :TComment<CR>
 "fold toggle
 nnoremap <Space> za
 
-"change to current directory
-nnoremap ,cd :cd %:p:h<CR>
-
 "yank to end of line
 noremap Y y$
 
