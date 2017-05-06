@@ -17,8 +17,8 @@ nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 nnoremap <C-s> :NERDTreeFind<CR>
 nnoremap <C-a> :NERDTreeToggle<CR>
 
-" TComment
-map <leader>c :TComment<CR>
+"Commentary
+nmap <leader>c <Plug>CommentaryLine
 
 "fugitive & git
 nnoremap <leader>gs :Gstatus<CR>
