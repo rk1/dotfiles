@@ -11,10 +11,6 @@ nnoremap ; :
 nnoremap + <C-a>
 nnoremap _ <C-x>
 
-"comment toggle
-map <D-/> :TComment<CR>
-map <leader>c :TComment<CR>
-
 "easier go to line
 :nmap <CR> G
 
