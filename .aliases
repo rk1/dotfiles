@@ -18,7 +18,6 @@ alias -- -='cd -'
 
 # Applications
 alias f="open . -a finder"
-alias vi="mvim --remote-tab-silent"
 alias ql="qlmanage -p"
 alias cal='gcal --starting-day=1'
 alias sf="open -a Safari"
@@ -49,7 +48,6 @@ alias gpl='git pull'
 alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
- 
 
 mkcd () { mkdir -p "$@" && cd "$@"; }
 
