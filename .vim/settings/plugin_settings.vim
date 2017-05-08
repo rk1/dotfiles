@@ -35,6 +35,14 @@ let g:fzf_layout = { 'down': '~25%' }
 "jsx
 let g:jsx_pragma_required = 1
 
+"easymotion
+let g:EasyMotion_smartcase = 1
+map <Leader> <Plug>(easymotion-prefix)
+nmap f <Plug>(easymotion-s)
+nmap s <Plug>(easymotion-overwin-f2)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
 "flow
 let g:flow#autoclose = 1
 
