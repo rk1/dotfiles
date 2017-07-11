@@ -2,17 +2,6 @@
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCrMapping = 1
 
-"Syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 8
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': ['html', 'hbs'] }
-nnoremap <Leader>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-
 "NERDTree
 nnoremap <C-s> :NERDTreeFind<CR>
 nnoremap <C-a> :NERDTreeToggle<CR>
@@ -43,18 +32,20 @@ nmap s <Plug>(easymotion-overwin-f2)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
-"flow
-let g:flow#autoclose = 1
-
-"Neoformat
- let g:neoformat_javascript_prettier = {
-     \ 'exe': 'prettier',
-     \ 'args': ['--print-width 100', '--single-quote', '--stdin', '--trailing-comma all'],
-     \ 'stdin': 1,
-     \ }
-
-let g:neoformat_enabled_javascript = ['prettier']
-
-map <leader>ff :Neoformat<cr>
-autocmd BufWritePre *.js Neoformat
-
+"ale
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_fix_on_save = 1
+" let g:ale_lint_on_text_changed = "never"
+" let g:ale_sign_column_always = 1
+" let g:ale_set_loclist = 0
+" let g:ale_set_quickfix = 1
+" let g:ale_open_list = 1
+let g:ale_javascript_prettier_use_global = 1
+let g:ale_javascript_prettier_options = "--print-width 100 --single-quote --trailing-comma es5"
+let g:ale_linters = {
+\   'javascript': ['flow'],
+\}
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\}
