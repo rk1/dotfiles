@@ -24,6 +24,9 @@ let g:fzf_layout = { 'down': '~25%' }
 "jsx
 let g:jsx_pragma_required = 1
 
+"closetag
+let g:closetag_filenames = '*.html,*.js,*.jsx'
+
 "easymotion
 let g:EasyMotion_smartcase = 1
 map <Leader> <Plug>(easymotion-prefix)
