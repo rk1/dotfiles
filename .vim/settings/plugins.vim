@@ -32,5 +32,6 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'w0rp/ale'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'junegunn/goyo.vim'
 Bundle 'rk1/snipmate-snippets'
 
