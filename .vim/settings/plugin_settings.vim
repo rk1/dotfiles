@@ -3,8 +3,8 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCrMapping = 1
 
 "NERDTree
-nnoremap <C-s> :NERDTreeFind<CR>
-nnoremap <C-a> :NERDTreeToggle<CR>
+nnoremap <C-s> ::NERDTreeToggle %<CR>
+let NERDTreeQuitOnOpen=1
 
 "Commentary
 nmap <leader>c <Plug>CommentaryLine
