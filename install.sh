@@ -12,6 +12,7 @@ H=(\
     .vim						\
     .vimrc						\
     .tigrc						\
+    .tmux.conf						\
     )
 
 P=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
