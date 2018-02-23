@@ -18,8 +18,11 @@ let NERDTreeQuitOnOpen=1
 nmap <leader>c <Plug>CommentaryLine
 
 "fugitive & git
-nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :!git diff<CR>
+
+"magit
+nnoremap <leader>gs :MagitOnly<CR>
+let g:magit_default_fold_level = 2
 
 "fzf
 nnoremap <C-p> :FZF<CR>
