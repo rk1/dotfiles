@@ -40,20 +40,14 @@ let g:EasyMotion_smartcase = 1
 map <Leader> <Plug>(easymotion-prefix)
 nmap f <Plug>(easymotion-s)
 nmap s <Plug>(easymotion-overwin-f2)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+" map  n <Plug>(easymotion-next)
+" map  N <Plug>(easymotion-prev)
 
 "ale
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
-" let g:ale_lint_on_text_changed = "never"
-" let g:ale_sign_column_always = 1
-" let g:ale_set_loclist = 0
-" let g:ale_set_quickfix = 1
-" let g:ale_open_list = 1
 let g:ale_javascript_prettier_use_global = 1
-let g:ale_javascript_prettier_options = "--print-width 100 --single-quote --trailing-comma es5"
 let g:ale_linters = {
 \   'javascript': ['flow'],
 \}
