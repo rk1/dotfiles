@@ -3,13 +3,15 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCrMapping = 1
 
 "NERDTree
-function NerdToggleFind()
-    if &filetype == 'nerdtree'
-        :NERDTreeToggle
-    else
-        :NERDTreeFind
-    endif
-endfunction
+if !exists("*NerdToggleFind")
+    function NerdToggleFind()
+        if &filetype == 'nerdtree'
+            :NERDTreeToggle
+        else
+            :NERDTreeFind
+        endif
+    endfunction
+endif
 
 nnoremap <C-s> :call NerdToggleFind()<CR>
 let NERDTreeQuitOnOpen=1
