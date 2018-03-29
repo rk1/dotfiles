@@ -17,6 +17,7 @@ set ff=unix
 set mousehide
 set foldmethod=indent
 set foldlevelstart=99
+set completeopt-=preview
 
 "use system clipboard
 set clipboard=unnamed
