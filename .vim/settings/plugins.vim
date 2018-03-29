@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'fatih/vim-go'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/tlib'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
