@@ -34,3 +34,7 @@ set directory^=$HOME/.vimswaps/
 filetype plugin indent on
 syntax on
 
+"theme
+set background=light
+colorscheme solarized
+call togglebg#map("<F5>")
