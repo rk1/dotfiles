@@ -9,7 +9,6 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 "use prettier as a javascript formatter
 autocmd FileType javascript set formatprg=prettier\ --stdin
-"autocmd FileType javascript set formatprg=prettier\ --stdin\ --print-width 100\ --single-quote\ --trailing-comma all
 
 "better html li indent
 let g:html_indent_inctags = "li,ul"
