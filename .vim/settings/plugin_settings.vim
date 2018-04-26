@@ -35,6 +35,9 @@ let g:fzf_action = {
 let g:fzf_layout = { 'down': '~25%' }
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
+"javascript
+let g:javascript_plugin_flow = 1
+
 "jsx
 let g:jsx_pragma_required = 1
 
