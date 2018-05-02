@@ -9,3 +9,5 @@ if [ -f ~/.localrc ]; then
   . ~/.localrc
 fi
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
