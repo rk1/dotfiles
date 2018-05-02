@@ -49,8 +49,6 @@ let g:EasyMotion_smartcase = 1
 map <Leader> <Plug>(easymotion-prefix)
 nmap f <Plug>(easymotion-s)
 nmap s <Plug>(easymotion-overwin-f2)
-" map  n <Plug>(easymotion-next)
-" map  N <Plug>(easymotion-prev)
 
 "ale
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
