@@ -26,7 +26,7 @@ set guioptions-=a
 
 "statusline
 set laststatus=2
-set statusline+=%f%m%=%P
+set statusline=%f%m%=%P
 
 "put all swap files in one place
 set directory^=$HOME/.vimswaps/
