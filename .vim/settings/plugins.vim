@@ -1,35 +1,37 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Vundle
-Bundle 'gmarik/vundle'
-Bundle 'Townk/vim-autoclose.git'
-Bundle 'garbas/vim-snipmate'
-Bundle 'tpope/vim-fugitive'
-Bundle 'jreybert/vimagit'
-Bundle 'easymotion/vim-easymotion'
-Bundle 'ervandew/supertab'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'alvan/vim-closetag'
-Bundle 'scrooloose/nerdtree'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'fatih/vim-go'
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'vim-scripts/tlib'
-Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Bundle 'junegunn/fzf.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'mxw/vim-jsx'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-repeat'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'w0rp/ale'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'junegunn/goyo.vim'
-Bundle 'rk1/snipmate-snippets'
-
+call plug#begin('~/.vim/bundle')
+Plug 'Townk/vim-autoclose'
+Plug 'garbas/vim-snipmate'
+Plug 'tpope/vim-fugitive'
+Plug 'jreybert/vimagit'
+Plug 'easymotion/vim-easymotion'
+Plug 'ervandew/supertab'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'alvan/vim-closetag'
+Plug 'scrooloose/nerdtree'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'vim-scripts/IndexedSearch'
+Plug 'vim-scripts/tlib'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-markdown', {'for': 'markdown'}
+Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/matchit.zip'
+Plug 'w0rp/ale'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
+Plug 'junegunn/goyo.vim'
+Plug 'rk1/snipmate-snippets'
+call plug#end()

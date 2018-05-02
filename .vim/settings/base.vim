@@ -31,9 +31,6 @@ set statusline=%f%m%=%P
 "put all swap files in one place
 set directory^=$HOME/.vimswaps/
 
-filetype plugin indent on
-syntax on
-
 "theme
 set background=light
 colorscheme solarized
