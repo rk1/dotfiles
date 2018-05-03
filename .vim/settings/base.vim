@@ -38,5 +38,4 @@ call togglebg#map("<F5>")
 
 " javascript
 au BufRead,BufNewFile *.js set filetype=javascript.jsx
-autocmd FileType javascript set formatprg=prettier\ --stdin
 
