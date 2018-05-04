@@ -1,4 +1,4 @@
 " ~/.vim/settings
+runtime! settings/keymappings.vim
 runtime! settings/plugins.vim
 runtime! settings/base.vim
-runtime! settings/keymappings.vim
