@@ -24,7 +24,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
 Plug 'rk1/snipmate-snippets'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
@@ -69,6 +69,9 @@ endif
 
 nnoremap <C-s> :call NerdToggleFind()<CR>
 let NERDTreeQuitOnOpen=1
+
+"UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
 
 "fzf
 nnoremap <C-p> :FZF<CR>
