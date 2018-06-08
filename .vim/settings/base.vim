@@ -36,6 +36,9 @@ set background=light
 colorscheme solarized
 call togglebg#map("<F5>")
 
+"use vertical split for diffing
+set diffopt+=vertical
+
 " javascript
 au BufRead,BufNewFile *.js set filetype=javascript.jsx
 
