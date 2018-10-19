@@ -5,14 +5,13 @@
 H=(\
     .bashrc						\
     .zshrc						\
-    .aliases						\
+    .aliases					\
     .colors						\
-    .gitconfig						\
-    .inputrc						\
+    .inputrc					\
     .vim						\
     .vimrc						\
     .tigrc						\
-    .tmux.conf						\
+    .tmux.conf					\
     )
 
 P=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
