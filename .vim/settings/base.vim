@@ -15,6 +15,7 @@ set guioptions=aAce
 set modelines=0
 set ff=unix
 set mousehide
+set nohlsearch
 set foldmethod=indent
 set foldlevelstart=99
 set completeopt-=preview
