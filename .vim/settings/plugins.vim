@@ -7,7 +7,6 @@ endif
 
 call plug#begin('~/.vim/bundle')
 Plug 'w0rp/ale'
-Plug 'jreybert/vimagit'
 Plug 'easymotion/vim-easymotion'
 Plug 'Townk/vim-autoclose'
 Plug 'ervandew/supertab'
@@ -45,10 +44,6 @@ let g:ale_fixers = {
 \   'reason': ['refmt'],
 \   'javascript': ['prettier'],
 \}
-
-"magit
-nnoremap <leader>gs :MagitOnly<CR>
-let g:magit_default_fold_level = 2
 
 "easymotion
 let g:EasyMotion_smartcase = 1
@@ -91,6 +86,7 @@ nmap <leader>c <Plug>CommentaryLine
 
 "fugitive & git
 nnoremap <leader>gd :!git diff<CR>
+nnoremap <leader>gs :Gstatus<CR>
 
 "javascript
 let g:javascript_plugin_flow = 1
