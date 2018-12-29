@@ -17,6 +17,10 @@ nnoremap _ <C-x>
 "fold toggle
 nnoremap <Space> za
 
+" easier difference navigation
+map ]] ]c
+map [[ [c
+
 "yank to end of line
 noremap Y y$
 
@@ -47,4 +51,3 @@ imap <silent> <leader>aa mmgg=G`m^zz
 " Edit and reload .vimrc
 nmap <leader>vr :ex ~/.vim/settings/<CR>
 map <silent> <leader>vrr :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
