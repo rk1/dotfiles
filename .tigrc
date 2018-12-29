@@ -2,3 +2,6 @@ bind generic <Ctrl-f> scroll-page-down
 bind generic <Ctrl-b> scroll-page-up
 bind main o enter
 bind diff o maximize
+bind status o enter
+set status-show-untracked-files = true
+set status-show-untracked-dirs = true
