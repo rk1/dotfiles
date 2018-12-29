@@ -32,8 +32,23 @@ Plug 'reasonml-editor/vim-reason-plus', { 'for': 'reason' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
-call plug#end()
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'steelsojka/deoplete-flow'
+
+
+call plug#end()
 
 "ale
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
@@ -81,6 +96,22 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCrMapping = 1
 
+"Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.javascript = ['LanguageClient']
+
+let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
+autocmd CompleteDone * pclose
+
+function! StrTrim(txt)
+  return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+endfunction
+let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
+if g:flow_path != 'flow not found'
+  let g:deoplete#sources#flow#flow_bin = g:flow_path
+endif
+
 "Commentary
 nmap <leader>c <Plug>CommentaryLine
 
@@ -104,3 +135,6 @@ let g:go_list_type = "quickfix"
 let g:go_fmt_fail_silently = 1
 let g:go_metalinter_autosave = 0
 
+"LanguageClient
+nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
