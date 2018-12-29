@@ -29,6 +29,7 @@ Plug 'SirVer/ultisnips'
 Plug 'rk1/snipmate-snippets'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'reasonml-editor/vim-reason-plus', { 'for': 'reason' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
@@ -40,10 +41,8 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_global = 1
-let g:ale_linters = {
-\   'javascript': ['flow'],
-\}
 let g:ale_fixers = {
+\   'reason': ['refmt'],
 \   'javascript': ['prettier'],
 \}
 
