@@ -60,4 +60,5 @@ set diffopt+=vertical
 
 " javascript
 au BufRead,BufNewFile *.js set filetype=javascript.jsx
+au BufEnter *.js set fo-=c fo-=r fo-=o
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
