@@ -47,7 +47,6 @@ endif
 
 Plug 'steelsojka/deoplete-flow'
 
-
 call plug#end()
 
 "ale

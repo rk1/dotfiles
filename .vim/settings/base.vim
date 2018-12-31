@@ -26,8 +26,21 @@ set clipboard=unnamed
 set clipboard-=autoselect
 set guioptions-=a
 
-"statusline
+"put all swap files in one place
+set directory^=$HOME/.vimswaps/
 
+"colorscheme
+set background=light
+colorscheme solarized
+call togglebg#map("<F5>")
+highlight LineNr ctermfg=grey ctermbg=white
+highlight SignColumn ctermfg=grey ctermbg=white
+highlight CursorLineNr ctermfg=DarkGray ctermbg=white
+
+"use vertical split for diffing
+set diffopt+=vertical
+
+"statusline
 function! LinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))
 
@@ -40,23 +53,8 @@ function! LinterStatus() abort
     \   all_errors
     \)
 endfunction
-
 set laststatus=2
 set statusline=%f%m%=%{LinterStatus()}
-
-"put all swap files in one place
-set directory^=$HOME/.vimswaps/
-
-"theme
-set background=light
-colorscheme solarized
-call togglebg#map("<F5>")
-highlight LineNr ctermfg=grey ctermbg=white
-highlight SignColumn ctermfg=grey ctermbg=white
-highlight CursorLineNr ctermfg=DarkGray ctermbg=white
-
-"use vertical split for diffing
-set diffopt+=vertical
 
 " javascript
 au BufRead,BufNewFile *.js set filetype=javascript.jsx
