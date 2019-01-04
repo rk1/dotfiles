@@ -117,7 +117,7 @@ nmap <leader>c <Plug>CommentaryLine
 
 "fugitive & git
 nnoremap <leader>gd :!git diff<CR>
-nnoremap <leader>gs :Gstatus<CR>
+nnoremap <Leader>gs :Gstatus<CR>:30wincmd_<CR>
 
 "javascript
 let g:javascript_plugin_flow = 1
