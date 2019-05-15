@@ -6,10 +6,8 @@ endif
 
 
 call plug#begin('~/.vim/bundle')
-Plug 'w0rp/ale'
 Plug 'easymotion/vim-easymotion'
-Plug 'Townk/vim-autoclose'
-Plug 'ervandew/supertab'
+"Plug 'Townk/vim-autoclose'
 Plug 'alvan/vim-closetag'
 Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
@@ -27,37 +25,96 @@ Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'rk1/snipmate-snippets'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'reasonml-editor/vim-reason-plus', { 'for': 'reason' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 endif
-
-Plug 'steelsojka/deoplete-flow'
 
 call plug#end()
 
-"ale
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_use_global = 1
-let g:ale_fixers = {
-\   'reason': ['refmt'],
-\   'javascript': ['prettier'],
-\}
+
+if has('nvim')
+    " coc
+    inoremap <silent><expr> <TAB>
+          \ pumvisible() ? coc#_select_confirm() :
+          \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+          \ <SID>check_back_space() ? "\<TAB>" :
+          \ coc#refresh()
+
+    function! s:check_back_space() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+
+    " Use <M-space> to trigger completion.
+    inoremap <silent><expr> <M-space> coc#refresh()
+
+    " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+    " Coc only does snippet and additional edit on confirm.
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+    " Navigate diagnostics
+    nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+    nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
+
+    " Remap keys for gotos
+    nmap <silent> gd <Plug>(coc-definition)
+    nmap <silent> gy <Plug>(coc-type-definition)
+    nmap <silent> gi <Plug>(coc-implementation)
+    nmap <silent> gr <Plug>(coc-references)
+
+    " Use K to show documentation in preview window
+    nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+    function! s:show_documentation()
+      if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+      else
+        call CocAction('doHover')
+      endif
+    endfunction
+
+    " Highlight symbol under cursor on CursorHold
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+
+    " Remap for rename current word
+    nmap <leader>rn <Plug>(coc-rename)
+
+    " Remap for format selected region
+    xmap <leader>f  <Plug>(coc-format-selected)
+    nmap <leader>f  <Plug>(coc-format-selected)
+
+    augroup mygroup
+      autocmd!
+      " Setup formatexpr specified filetype(s).
+      autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+      " Update signature help on jump placeholder
+      autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+    augroup end
+
+    " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+    xmap <leader>a  <Plug>(coc-codeaction-selected)
+    nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+    " Remap for do codeAction of current line
+    nmap <leader>ac  <Plug>(coc-codeaction)
+    " Fix autofix problem of current line
+    nmap <leader>qf  <Plug>(coc-fix-current)
+
+    " Use `:Format` to format current buffer
+    command! -nargs=0 Format :call CocAction('format')
+
+    " Use `:Fold` to fold current buffer
+    command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+    "coc-prettier
+    command! -nargs=0 Prettier :CocCommand prettier.formatFile
+endif
 
 "easymotion
 let g:EasyMotion_smartcase = 1
@@ -79,9 +136,6 @@ endif
 nnoremap <C-s> :call NerdToggleFind()<CR>
 let NERDTreeQuitOnOpen=1
 
-"UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-
 "fzf
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-f> :Ag<CR>
@@ -92,25 +146,7 @@ let g:fzf_layout = { 'down': '~25%' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
-"SuperTab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabCrMapping = 1
-
-"Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.javascript = ['LanguageClient']
-
-let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 autocmd CompleteDone * pclose
-
-function! StrTrim(txt)
-  return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-endfunction
-let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
-if g:flow_path != 'flow not found'
-  let g:deoplete#sources#flow#flow_bin = g:flow_path
-endif
 
 "Commentary
 nmap <leader>c <Plug>CommentaryLine
@@ -134,7 +170,3 @@ let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
 let g:go_fmt_fail_silently = 1
 let g:go_metalinter_autosave = 0
-
-"LanguageClient
-nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>

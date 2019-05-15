@@ -20,6 +20,11 @@ set foldmethod=indent
 set foldlevelstart=99
 set completeopt-=preview
 set signcolumn=yes
+set nobackup
+set nowritebackup
+
+"smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
 
 "use system clipboard
 set clipboard=unnamed
@@ -40,21 +45,8 @@ highlight CursorLineNr ctermfg=DarkGray ctermbg=white
 "use vertical split for diffing
 set diffopt+=vertical
 
-"statusline
-function! LinterStatus() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
-
-    let l:all_errors = l:counts.error + l:counts.style_error
-    let l:all_non_errors = l:counts.total - l:all_errors
-
-    return l:counts.total == 0 ? '[OK]' : printf(
-    \   '[%dW %dE]',
-    \   all_non_errors,
-    \   all_errors
-    \)
-endfunction
 set laststatus=2
-set statusline=%f%m%=%{LinterStatus()}
+set statusline=%f%m%=%{coc#status()}
 
 " javascript
 au BufRead,BufNewFile *.js set filetype=javascript.jsx
