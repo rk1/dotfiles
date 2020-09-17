@@ -6,8 +6,9 @@ endif
 
 
 call plug#begin('~/.vim/bundle')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
-"Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
@@ -22,24 +23,18 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'SirVer/ultisnips'
 Plug 'rk1/snipmate-snippets'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'reasonml-editor/vim-reason-plus', { 'for': 'reason' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
-
-if has('nvim')
-    Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-endif
 
 call plug#end()
 
 
-if has('nvim')
+" if has('nvim')
     " coc
     inoremap <silent><expr> <TAB>
           \ pumvisible() ? coc#_select_confirm() :
@@ -51,6 +46,9 @@ if has('nvim')
       let col = col('.') - 1
       return !col || getline('.')[col - 1]  =~# '\s'
     endfunction
+
+    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
     " Use <M-space> to trigger completion.
     inoremap <silent><expr> <M-space> coc#refresh()
@@ -68,6 +66,9 @@ if has('nvim')
     nmap <silent> gy <Plug>(coc-type-definition)
     nmap <silent> gi <Plug>(coc-implementation)
     nmap <silent> gr <Plug>(coc-references)
+
+    " Diagnostics
+    " nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 
     " Use K to show documentation in preview window
     nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -105,7 +106,7 @@ if has('nvim')
     " Remap for do codeAction of current line
     nmap <leader>ac  <Plug>(coc-codeaction)
     " Fix autofix problem of current line
-    nmap <leader>qf  <Plug>(coc-fix-current)
+    nmap <leader>qf  :CocFix<cr>
 
     " Use `:Format` to format current buffer
     command! -nargs=0 Format :call CocAction('format')
@@ -114,7 +115,11 @@ if has('nvim')
     command! -nargs=? Fold :call     CocAction('fold', <f-args>)
     "coc-prettier
     command! -nargs=0 Prettier :CocCommand prettier.formatFile
-endif
+
+    autocmd ColorScheme *
+      \ hi CocWarningHighlight guibg=#909020
+      \ | hi CocInfoHighlight guibg=#209020
+" endif
 
 "easymotion
 let g:EasyMotion_smartcase = 1
@@ -153,7 +158,8 @@ nmap <leader>c <Plug>CommentaryLine
 
 "fugitive & git
 nnoremap <leader>gd :!git diff<CR>
-nnoremap <Leader>gs :Gstatus<CR>:30wincmd_<CR>
+" nnoremap <Leader>gs :Gstatus<CR>:100wincmd_<CR>
+nnoremap <Leader>gs :vert Git<CR>
 
 "javascript
 let g:javascript_plugin_flow = 1
@@ -161,12 +167,9 @@ let g:javascript_plugin_flow = 1
 "jsx
 let g:jsx_pragma_required = 1
 
+"auto-pairs
+let g:AutoPairsShortcutToggle = ''
+
 "closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 
-"vim-go
-let g:go_metalinter_enabled = []
-let g:go_fmt_command = "goimports"
-let g:go_list_type = "quickfix"
-let g:go_fmt_fail_silently = 1
-let g:go_metalinter_autosave = 0
