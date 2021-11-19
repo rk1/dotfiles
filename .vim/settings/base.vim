@@ -69,7 +69,7 @@ set diffopt+=vertical
 
 set laststatus=2
 if has('nvim')
-    set statusline=%f%m%=%{coc#status()}
+    set statusline=%f%m%=%{FugitiveStatusline()}%{coc#status()}
 endif
 
 " javascript
