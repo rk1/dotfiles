@@ -46,6 +46,10 @@ nnoremap <expr> <F6> ':set isk' . (index(split(&isk, ','), '-') == -1 ? '+' : '-
 map <silent> <leader>aa mmgg=G`m^zz
 imap <silent> <leader>aa mmgg=G`m^zz
 
+"long lines
+nnoremap j gj
+nnoremap k gk
+
 " Edit and reload .vimrc
 nmap <leader>vr :ex ~/.vim/settings/<CR>
 map <silent> <leader>vrr :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
