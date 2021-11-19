@@ -28,7 +28,6 @@ Plug 'rk1/snipmate-snippets'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'tpope/vim-markdown', {'for': 'markdown'}
 
 call plug#end()
 
