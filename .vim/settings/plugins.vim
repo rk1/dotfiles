@@ -23,12 +23,11 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 Plug 'rk1/snipmate-snippets'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'reasonml-editor/vim-reason-plus', { 'for': 'reason' }
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
 
 call plug#end()
