@@ -35,10 +35,8 @@ set splitright
 "buffers
 map gp :e#<cr>
 
-"TextMate-like braces
-inoremap {<cr> {<cr>}<c-o>O
-inoremap [<cr> [<cr>]<c-o>O<tab>
-inoremap (<cr> (<cr>)<c-o>O<tab>
+"visual mode replace void register
+vnoremap <leader>p "_dP
 
 "include dash or not?
 set iskeyword=@,48-57,_,192-255,#,-
