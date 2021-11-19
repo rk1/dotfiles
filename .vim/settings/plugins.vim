@@ -142,25 +142,30 @@ nnoremap <C-s> :call NerdToggleFind()<CR>
 let NERDTreeQuitOnOpen=1
 
 "fzf
-nnoremap <C-p> :FZF<CR>
+let g:fzf_layout = { 'down': '~30%' }
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Ag<CR>
 nnoremap <C-b> :Buffers<CR>
-let g:fzf_action = {
-      \ 'ctrl-o': 'open' }
-let g:fzf_layout = { 'down': '~25%' }
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>,
+    \ {'options': '--layout=reverse --delimiter : --nth 4..', 'window': { 'width': 0.8, 'height': 0.8 }}, <bang>0)
+
 
 autocmd CompleteDone * pclose
 
-"Commentary
-nmap <leader>c <Plug>CommentaryLine
+"fzf-checkout
+let g:fzf_checkout_git_options = '--sort=-committerdate'
 
 "fugitive & git
-nnoremap <leader>gd :!git diff<CR>
-" nnoremap <Leader>gs :Gstatus<CR>:100wincmd_<CR>
-nnoremap <Leader>gs :vert Git<CR>
+autocmd User Fugitive command! -bar -bang -buffer Gpushup Gpush<bang> -u origin HEAD
 
+nnoremap <Leader>gs :vert Git<CR>
+nnoremap <Leader>gb :GBranches --locals<CR>
+
+"Commentary
+nmap <leader>c <Plug>CommentaryLine
 "javascript
 let g:javascript_plugin_flow = 1
 
