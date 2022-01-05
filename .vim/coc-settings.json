@@ -5,12 +5,10 @@
     "javascript",
     "json",
     "javascriptreact",
-    "typescriptreact"
+    "typescriptreact",
+    "rust"
   ],
   "suggest.snippetIndicator": "▸",
-  "coc.source.around.enable": false,
-  "coc.source.buffer.enable": false,
-  "eslint.autoFixOnSave": true,
   "suggest.noselect": false,
   "suggest.maxCompleteItemCount": 15,
   "prettier.disableSuccessMessage": true,
