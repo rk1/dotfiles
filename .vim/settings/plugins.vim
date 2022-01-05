@@ -114,6 +114,14 @@ call plug#end()
     autocmd ColorScheme *
       \ hi CocWarningHighlight guibg=#909020
       \ | hi CocInfoHighlight guibg=#209020
+
+    let g:coc_global_extensions = [
+          \'coc-tsserver',
+          \'coc-eslint',
+          \'coc-snippets',
+          \'coc-prettier',
+          \'coc-rust-analyzer'
+          \]
 " endif
 
 "easymotion
