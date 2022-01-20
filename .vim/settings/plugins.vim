@@ -178,6 +178,3 @@ let g:jsx_pragma_required = 1
 "auto-pairs
 let g:AutoPairsShortcutToggle = ''
 
-"closetag
-let g:closetag_filenames = '*.html,*.js,*.jsx'
-
