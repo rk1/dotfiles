@@ -42,10 +42,6 @@ vnoremap <leader>p "_dP
 set iskeyword=@,48-57,_,192-255,#,-
 nnoremap <expr> <F6> ':set isk' . (index(split(&isk, ','), '-') == -1 ? '+' : '-') . '=-<cr>:set iskeyword?<cr>'
 
-"indent
-map <silent> <leader>aa mmgg=G`m^zz
-imap <silent> <leader>aa mmgg=G`m^zz
-
 "long lines
 nnoremap j gj
 nnoremap k gk
