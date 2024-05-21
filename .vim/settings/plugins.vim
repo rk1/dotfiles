@@ -138,6 +138,8 @@ nmap f <Plug>(easymotion-s)
 nmap s <Plug>(easymotion-overwin-f2)
 
 "NERDTree
+let g:NERDTreeMinimalMenu=1
+
 if !exists("*NerdToggleFind")
     function NerdToggleFind()
         if &filetype == 'nerdtree'
