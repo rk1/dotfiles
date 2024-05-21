@@ -24,9 +24,8 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'rk1/snipmate-snippets'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim'
-
+Plug 'f-person/auto-dark-mode.nvim'
 call plug#end()
-
 
 if has('nvim')
     inoremap <silent><expr> <TAB>
@@ -186,4 +185,10 @@ autocmd FileType typescriptreact setlocal commentstring={/*\ %s\ */}
 
 "jsx
 let g:jsx_pragma_required = 1
+
+
+"auto-dark-mode
+if has('nvim')
+    lua require'auto-dark-mode'.setup()
+endif
 
