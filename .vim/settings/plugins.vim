@@ -28,29 +28,36 @@ Plug 'HerringtonDarkholme/yats.vim'
 call plug#end()
 
 
-" if has('nvim')
-    " coc
+if has('nvim')
     inoremap <silent><expr> <TAB>
-          \ pumvisible() ? coc#_select_confirm() :
-          \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-          \ <SID>check_back_space() ? "\<TAB>" :
-          \ coc#refresh()
+        \ coc#pum#visible() ? coc#_select_confirm() :
+        \ coc#expandableOrJumpable() ?
+        \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ coc#refresh()
+
+    function! s:check_back_space() abort
+        let col = col('.') - 1
+        return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+
+    "let g:coc_snippet_next = '<tab>'
 
     function! s:check_back_space() abort
       let col = col('.') - 1
-      return !col || getline('.')[col - 1]  =~# '\s'
+      return !col || getline('.')[col - 1]  =~ '\s'
     endfunction
-
-    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-
-    " Use <M-space> to trigger completion.
-    inoremap <silent><expr> <M-space> coc#refresh()
 
     " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
     " Coc only does snippet and additional edit on confirm.
     inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
     inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+    " Use <M-space> to trigger completion.
+    "inoremap <silent><expr> <M-space> coc#refresh()
 
     " Navigate diagnostics
     nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
@@ -97,7 +104,6 @@ call plug#end()
     " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
     xmap <leader>a  <Plug>(coc-codeaction-selected)
     nmap <leader>a  <Plug>(coc-codeaction-selected)
-
     " Remap for do codeAction of current line
     nmap <leader>ac  <Plug>(coc-codeaction)
     " Fix autofix problem of current line
@@ -108,6 +114,7 @@ call plug#end()
 
     " Use `:Fold` to fold current buffer
     command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
     "coc-prettier
     command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
@@ -122,7 +129,7 @@ call plug#end()
           \'coc-prettier',
           \'coc-rust-analyzer'
           \]
-" endif
+endif
 
 "easymotion
 let g:EasyMotion_smartcase = 1
@@ -155,7 +162,6 @@ nnoremap <C-b> :Buffers<CR>
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>,
     \ {'options': '--layout=reverse --delimiter : --nth 4..', 'window': { 'width': 0.8, 'height': 0.8 }}, <bang>0)
 
-
 autocmd CompleteDone * pclose
 
 "fzf-checkout
@@ -167,14 +173,15 @@ autocmd User Fugitive command! -bar -bang -buffer Gpushup Gpush<bang> -u origin 
 nnoremap <Leader>gs :vert Git<CR>
 nnoremap <Leader>gb :GBranches --locals<CR>
 
-"Commentary
+"commentary
 nmap <leader>c <Plug>CommentaryLine
-"javascript
-let g:javascript_plugin_flow = 1
-
-"jsx
-let g:jsx_pragma_required = 1
 
 "auto-pairs
 let g:AutoPairsShortcutToggle = ''
+
+"javascript
+autocmd FileType typescriptreact setlocal commentstring={/*\ %s\ */}
+
+"jsx
+let g:jsx_pragma_required = 1
 
