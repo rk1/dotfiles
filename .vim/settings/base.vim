@@ -41,8 +41,11 @@ set directory^=$HOME/.vimswaps/
 
 "colorscheme
 set background=light
-colorscheme solarized
-call togglebg#map("<F5>")
+try
+    colorscheme solarized
+catch
+endtry
+
 highlight LineNr ctermfg=grey ctermbg=white
 highlight SignColumn ctermfg=grey ctermbg=white
 highlight CursorLineNr ctermfg=DarkGray ctermbg=white

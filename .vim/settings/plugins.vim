@@ -10,7 +10,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
-Plug 'altercation/vim-colors-solarized'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'maxmx03/solarized.nvim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
