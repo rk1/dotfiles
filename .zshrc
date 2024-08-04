@@ -1,5 +1,8 @@
+export ZSH=/Users/rossen/.oh-my-zsh
 ZSH_THEME="mrtazz"
-plugins=(zshmarks brew)
+plugins=(brew zshmarks zsh-completions)
+
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 source $ZSH/oh-my-zsh.sh
 
