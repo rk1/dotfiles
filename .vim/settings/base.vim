@@ -46,9 +46,13 @@ try
 catch
 endtry
 
-highlight LineNr ctermfg=grey ctermbg=white
-highlight SignColumn ctermfg=grey ctermbg=white
-highlight CursorLineNr ctermfg=DarkGray ctermbg=white
+"TODO: maybe it's safe to remove those
+" highlight diffAdded guifg=#859900
+" highlight diffRemoved guifg=#cc4f1a
+
+" highlight LineNr ctermfg=grey ctermbg=white
+" highlight SignColumn ctermfg=grey ctermbg=white
+" highlight CursorLineNr ctermfg=DarkGray ctermbg=white
 
 "cursor
 let &t_SI = "\e[6 q"
