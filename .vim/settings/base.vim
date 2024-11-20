@@ -39,25 +39,11 @@ set guioptions-=a
 "put all swap files in one place
 set directory^=$HOME/.vimswaps/
 
-"colorscheme
-set background=light
-try
-    colorscheme solarized
-catch
-endtry
-
-"TODO: maybe it's safe to remove those
-" highlight diffAdded guifg=#859900
-" highlight diffRemoved guifg=#cc4f1a
-
-" highlight LineNr ctermfg=grey ctermbg=white
-" highlight SignColumn ctermfg=grey ctermbg=white
-" highlight CursorLineNr ctermfg=DarkGray ctermbg=white
-
 "cursor
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-" Optionally reset the cursor on start:
+
+"optionally reset the cursor on start:
 augroup myCmds
 au!
 autocmd VimEnter * silent !echo -ne "\e[2 q"
@@ -65,11 +51,6 @@ augroup END
 
 "use vertical split for diffing
 set diffopt+=vertical
-
-set laststatus=2
-if has('nvim')
-    set statusline=%f%m%=%{FugitiveStatusline()}%{coc#status()}
-endif
 
 " javascript
 au BufRead,BufNewFile *.js set filetype=javascript.jsx

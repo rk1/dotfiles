@@ -12,7 +12,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'maxmx03/solarized.nvim'
-Plug 'vim-scripts/IndexedSearch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -38,8 +37,6 @@ if has('nvim')
         let col = col('.') - 1
         return !col || getline('.')[col - 1]  =~# '\s'
     endfunction
-
-    "let g:coc_snippet_next = '<tab>'
 
     " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
     " Coc only does snippet and additional edit on confirm.
@@ -167,6 +164,19 @@ autocmd User Fugitive command! -bar -bang -buffer Gpushup Gpush<bang> -u origin 
 
 nnoremap <Leader>gs :vert Git<CR>
 nnoremap <Leader>gb :GBranches --locals<CR>
+
+"solarized
+set background=light
+try
+    colorscheme solarized
+catch
+endtry
+
+"statusline
+set laststatus=2
+if has('nvim')
+    set statusline=%f%m%=%{FugitiveStatusline()}%{coc#status()}
+endif
 
 "commentary
 nmap <leader>c <Plug>CommentaryLine
