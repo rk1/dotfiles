@@ -23,8 +23,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'rk1/snipmate-snippets'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'f-person/auto-dark-mode.nvim'
 call plug#end()
 
@@ -182,6 +180,20 @@ autocmd FileType typescriptreact setlocal commentstring={/*\ %s\ */}
 "jsx
 let g:jsx_pragma_required = 1
 
+"treesitter
+lua << EOF
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { 
+    "lua", "vim",
+    "javascript", "typescript", "tsx",
+    "json", "html", "css",
+    "markdown", "yaml"
+  },
+  highlight = {
+    enable = true,
+  }
+}
+EOF
 
 "auto-dark-mode
 if has('nvim')
