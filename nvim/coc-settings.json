@@ -5,13 +5,11 @@
     "javascript",
     "json",
     "javascriptreact",
-    "typescriptreact",
-    "rust"
+    "typescriptreact"
   ],
   "suggest.snippetIndicator": "▸",
   "suggest.noselect": false,
   "suggest.maxCompleteItemCount": 15,
-  "prettier.disableSuccessMessage": true,
   "snippets.extends": {
     "typescriptreact": ["typescript"]
   }
