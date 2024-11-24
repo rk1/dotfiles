@@ -1,8 +1,7 @@
 {
   "auto-dark-mode.nvim": { "branch": "master", "commit": "4531f8b2b09ed8f0b8875a706419f9cecda1d969" },
-  "avante.nvim": { "branch": "main", "commit": "67e946ef1324d1273083eadc1f16b258baa19793" },
+  "avante.nvim": { "branch": "main", "commit": "c8e688a0ac2ae1fc2eac2b836b84f2a95acaeb4f" },
   "coc.nvim": { "branch": "release", "commit": "57d488a06bdb34de89acef3c2f3e9ce609d632ed" },
-  "copilot.lua": { "branch": "master", "commit": "f8d8d872bb319f640d5177dad5fbf01f7a16d7d0" },
   "dressing.nvim": { "branch": "master", "commit": "fc78a3ca96f4db9f8893bb7e2fd9823e0780451b" },
   "fzf-checkout.vim": { "branch": "master", "commit": "db0289a6c8e77b08a0150627733722fd07d5fa62" },
   "fzf.vim": { "branch": "master", "commit": "556f45e79ae5e3970054fee4c4373472604a1b4e" },
