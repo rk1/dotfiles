@@ -30,6 +30,7 @@ alias dw="cd ~/Downloads/"
 alias mov="cd ~/Movies/"
 alias vl="cd /Volumes/"
 
+# Git
 alias ga='git add -A'
 alias gl='git llog'
 alias glog='git log'

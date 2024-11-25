@@ -15,7 +15,8 @@ return {
       local query = opts.args
       vim.fn['fzf#vim#ag'](query, {
         options = '--layout=reverse --delimiter : --nth 4..',
-        window = { width = 0.8, height = 0.8 }
+        window = { width = 0.8, height = 0.8 },
+        ['command'] = 'ag --ignore "pnpm-lock.yaml"'
       }, bang == '!')
     end, { nargs = '*', bang = true })
     
