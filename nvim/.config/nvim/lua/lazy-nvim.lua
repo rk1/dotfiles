@@ -24,5 +24,4 @@ require("lazy").setup({
     'tpope/vim-repeat',
     'rk1/snipmate-snippets',
   },
-  checker = { enabled = true },
 })
