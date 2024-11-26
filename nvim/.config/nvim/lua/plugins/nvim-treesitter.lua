@@ -6,8 +6,7 @@ return {
       ensure_installed = { 
         "lua", "vim",
         "javascript", "typescript", "tsx",
-        "json", "html", "css",
-        "markdown", "yaml"
+        "json", "html", "css"
       },
       highlight = {
         enable = true,
