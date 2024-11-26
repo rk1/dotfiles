@@ -4,6 +4,9 @@ plugins=(brew zshmarks zsh-completions)
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
+export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
+
 source $ZSH/oh-my-zsh.sh
 
 . ~/.colors
