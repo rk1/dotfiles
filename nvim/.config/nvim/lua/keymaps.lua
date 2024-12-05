@@ -6,7 +6,6 @@ vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "_", "<C-x>")
-vim.keymap.set("n", "<CR>", "G")
 vim.keymap.set("n", "<Space>", "za")
 
 -- Difference navigation
