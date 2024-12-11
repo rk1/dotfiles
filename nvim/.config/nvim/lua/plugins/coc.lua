@@ -44,7 +44,7 @@ return {
         else
             return '<C-g>u<CR>'
         end
-    end, { expr = true, replace_keycodes = false })
+    end, { expr = true, replace_keycodes = true })
 
     -- Tab completion and snippet expansion
     vim.keymap.set('i', '<TAB>', function()
