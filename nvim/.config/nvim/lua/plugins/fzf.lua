@@ -15,7 +15,7 @@ return {
     })
     
     -- Global keymaps
-    vim.keymap.set('n', '<C-f>', fzf.grep_visual)
+    vim.keymap.set('n', '<C-f>', fzf.grep_project)
     vim.keymap.set('n', '<C-b>', fzf.buffers)
     vim.keymap.set('n', '<C-p>', fzf.files)
   end
