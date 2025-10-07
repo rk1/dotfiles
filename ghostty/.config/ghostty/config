@@ -1,0 +1,9 @@
+theme = dark:Builtin Solarized Light,light:Builtin Solarized Light
+foreground = #697a81
+font-family = "Operator Mono"
+font-style = "Book"
+font-style-bold = "Book"
+font-thicken = true
+font-synthetic-style = no-bold
+font-size = 17
+adjust-cell-width = "-5%"
