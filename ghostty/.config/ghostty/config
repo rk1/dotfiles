@@ -1,4 +1,4 @@
-theme = dark:Builtin Solarized Light,light:Builtin Solarized Light
+theme = dark:Builtin Solarized Dark,light:Builtin Solarized Light
 foreground = #697a81
 font-family = "Operator Mono"
 font-style = "Book"
