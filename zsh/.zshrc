@@ -34,3 +34,4 @@ alias l="showmarks"
 alias s="bookmark"
 alias d="deletemark"
 
+eval "$(zoxide init zsh)"
