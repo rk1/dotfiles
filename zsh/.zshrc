@@ -26,8 +26,6 @@ bindkey '^X' undo
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
-alias -g A="| ag"
-
 # zshmarks
 alias g="jump"
 alias l="showmarks"

@@ -13,6 +13,7 @@ alias ..="cd .."
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias -- -='cd -'
+alias -g A="| ag"
 
 # Applications
 alias f="open . -a finder"
