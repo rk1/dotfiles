@@ -3,6 +3,7 @@ foreground = #697a81
 font-family = "Operator Mono"
 font-style = "Book"
 font-style-bold = "Book"
+font-style-italic = false
 font-thicken = true
 font-synthetic-style = no-bold
 font-size = 17
