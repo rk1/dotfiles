@@ -22,7 +22,6 @@ require("lazy").setup({
     'tpope/vim-surround',
     'tpope/vim-abolish',
     'tpope/vim-repeat',
-    'rk1/snipmate-snippets',
   },
   change_detection = {
     notify = false,
