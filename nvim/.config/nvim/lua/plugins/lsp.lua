@@ -66,6 +66,8 @@ return {
 				ensure_installed = {
 					"ts_ls",
 					"eslint",
+					"cssls",
+					"tailwindcss",
 					"lua_ls",
 				},
 				automatic_installation = false,
