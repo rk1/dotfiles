@@ -9,6 +9,4 @@ else
     else
         eval `dircolors`
     fi
- fi
 fi
-
