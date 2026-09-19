@@ -7,3 +7,4 @@ font-thicken = true
 font-synthetic-style = no-bold
 font-size = 17
 adjust-cell-width = "-5%"
+keybind = shift+enter=text:\n
