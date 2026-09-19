@@ -56,11 +56,15 @@ return {
 	-- Mason-LSPConfig bridge
 	{
 		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim" },
+		dependencies = {
+			"williamboman/mason.nvim",
+			"neovim/nvim-lspconfig",
+		},
 		lazy = false,
 		config = function()
-			-- Set up capabilities for blink-cmp
-			local capabilities = require("blink-cmp").get_lsp_capabilities()
+			vim.lsp.config("*", {
+				capabilities = require("blink-cmp").get_lsp_capabilities(),
+			})
 
 			require("mason-lspconfig").setup({
 				ensure_installed = {
@@ -70,27 +74,13 @@ return {
 					"tailwindcss",
 					"lua_ls",
 				},
-				automatic_installation = false,
-				handlers = {
-					-- Default handler - applies to all servers without a custom handler
-					function(server_name)
-						require("lspconfig")[server_name].setup({
-							capabilities = capabilities,
-						})
-					end,
-					-- We can add any custom handlers for specific servers if needed here
-				},
 			})
 		end,
 	},
 	-- LSP Configuration
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"ibhagwan/fzf-lua",
-		},
+		dependencies = { "ibhagwan/fzf-lua" },
 		lazy = false,
 		config = function()
 			vim.diagnostic.config({
