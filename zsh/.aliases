@@ -31,11 +31,9 @@ alias vl="cd /Volumes/"
 
 # Git
 alias ga='git add -A'
-alias gl='git llog'
 alias glog='git log'
 alias gs='git status'
 alias gd='git diff'
-alias gdi='git di'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gb='git branch'
