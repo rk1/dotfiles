@@ -46,8 +46,6 @@ brew "wget"
 brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# Fish-like fast/unobtrusive autosuggestions for zsh
-brew "zsh-autosuggestions"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Tool to optimise images to a smaller size
