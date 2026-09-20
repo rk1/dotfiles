@@ -49,8 +49,6 @@ KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohm
 git clone https://github.com/jocelynmallon/zshmarks.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zshmarks"
 ```
 
-(`zsh-completions` is installed via Homebrew, so it needs no clone.)
-
 **tpm** is a tmux plugin manager. Clone it and then install the plugins with `prefix + I` inside tmux:
 
 ```zsh

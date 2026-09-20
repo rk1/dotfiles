@@ -9,7 +9,7 @@ elif [ -x /usr/local/bin/brew ]; then
 elif command -v brew >/dev/null; then
     BREW_PREFIX="$(brew --prefix)"
 fi
-FPATH="${BREW_PREFIX:+$BREW_PREFIX/share/zsh/site-functions:$BREW_PREFIX/share/zsh-completions:}${FPATH}"
+FPATH="${BREW_PREFIX:+$BREW_PREFIX/share/zsh/site-functions:}${FPATH}"
 
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
