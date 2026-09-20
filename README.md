@@ -1,14 +1,29 @@
 # dotfiles
 
-## Prerequisites
+macOS configuration managed with GNU Stow.
 
-- GNU Stow
+## Install
 
-## Installation
+### 1. Prerequisites
 
-1. Clone this repository to your home directory
+- macOS
+- Xcode command line tools — `xcode-select --install`
+- [Homebrew](https://brew.sh)
 
-2. Install all configurations:
+```zsh
+git clone https://github.com/rk1/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+```
+
+### 2. Homebrew packages
+
+```zsh
+brew bundle check --verbose
+brew bundle --no-upgrade
+```
+
+### 3. Stow the configs
+
 ```zsh
 stow */
 ```
@@ -18,4 +33,3 @@ Or install individual configurations:
 stow nvim    # Only install Neovim config
 stow zsh     # Only install Zsh config
 ```
-
