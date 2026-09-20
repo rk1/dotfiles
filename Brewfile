@@ -48,6 +48,8 @@ brew "yazi"
 brew "zoxide"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Additional completion definitions for zsh
+brew "zsh-completions"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Tool to optimise images to a smaller size

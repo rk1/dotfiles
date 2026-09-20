@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="mrtazz"
-plugins=(brew zshmarks zsh-completions)
+plugins=(brew zshmarks)
 
 if [ -x /opt/homebrew/bin/brew ]; then
     BREW_PREFIX=/opt/homebrew
@@ -9,7 +9,7 @@ elif [ -x /usr/local/bin/brew ]; then
 elif command -v brew >/dev/null; then
     BREW_PREFIX="$(brew --prefix)"
 fi
-FPATH="${BREW_PREFIX:+$BREW_PREFIX/share/zsh/site-functions:}${FPATH}"
+FPATH="${BREW_PREFIX:+$BREW_PREFIX/share/zsh/site-functions:$BREW_PREFIX/share/zsh-completions:}${FPATH}"
 
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
