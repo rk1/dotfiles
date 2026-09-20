@@ -45,9 +45,6 @@ vim.keymap.set("v", "<leader>p", '"_dP')
 -- iskeyword settings
 vim.opt.iskeyword = "@,48-57,_,192-255,#,-"
 
--- Swap files directory
-vim.opt.directory = vim.fn.expand("$HOME/.vimswaps//")
-
 -- Split settings
 vim.opt.splitbelow = true
 vim.opt.splitright = true
