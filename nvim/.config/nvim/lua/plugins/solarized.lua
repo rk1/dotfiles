@@ -4,7 +4,6 @@ return {
 	priority = 1000,
 	config = function(_, opts)
 		vim.o.termguicolors = true
-		vim.o.background = "light"
 		require("solarized").setup(opts)
 		vim.cmd.colorscheme("solarized")
 	end,
