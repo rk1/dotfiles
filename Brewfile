@@ -20,6 +20,8 @@ brew "neovim"
 brew "node"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Smart session manager for the terminal
+brew "sesh"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Opinionated Lua code formatter
