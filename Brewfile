@@ -28,8 +28,6 @@ brew "sesh"
 brew "stow"
 # Opinionated Lua code formatter
 brew "stylua"
-# Code-search similar to ack
-brew "the_silver_searcher"
 # Text interface for Git repositories
 brew "tig"
 # Terminal multiplexer
