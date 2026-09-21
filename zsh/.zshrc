@@ -1,32 +1,19 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="mrtazz"
-plugins=(brew zshmarks)
-
-if [ -x /opt/homebrew/bin/brew ]; then
-    BREW_PREFIX=/opt/homebrew
-elif [ -x /usr/local/bin/brew ]; then
-    BREW_PREFIX=/usr/local
-elif command -v brew >/dev/null; then
-    BREW_PREFIX="$(brew --prefix)"
-fi
-FPATH="${BREW_PREFIX:+$BREW_PREFIX/share/zsh/site-functions:}${FPATH}"
-
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
-source $ZSH/oh-my-zsh.sh
+unset HISTFILE          # keep history in-memory for this session
+HISTSIZE=50000
+setopt auto_cd auto_pushd interactive_comments complete_in_word always_to_end
+setopt hist_ignore_dups hist_ignore_space
 
-. ~/.colors
-. ~/.aliases
-
-if [ -f ~/.localrc ]; then
-    . ~/.localrc
-fi
-
-# Keep history in-memory for this session 
-unset HISTFILE
+# completion
+fpath=(/opt/homebrew/share/zsh/site-functions ~/.zsh/zshmarks $fpath)
+autoload -Uz compinit bashcompinit && compinit -C && bashcompinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors 'di=33:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 
+# vi mode
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
@@ -34,13 +21,14 @@ bindkey '^X' undo
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
-# zshmarks
-alias g="jump"
-alias l="showmarks"
-alias s="bookmark"
-alias d="deletemark"
+# zshmarks (git submodule)
+source ~/.zsh/zshmarks/zshmarks.plugin.zsh
+alias g="jump" l="showmarks" s="bookmark" d="deletemark"
 
-# yazi
+# zoxide
+eval "$(zoxide init zsh)"
+
+# yazi: cd to the directory you quit in
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -49,5 +37,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# zoxide
-eval "$(zoxide init zsh)"
+. ~/.colors
+. ~/.aliases
+[ -f ~/.localrc ] && . ~/.localrc
+
+# prompt: starship (brew "starship"), config in ~/.config/starship.toml
+eval "$(starship init zsh)"

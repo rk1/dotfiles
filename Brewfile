@@ -18,6 +18,8 @@ brew "htop"
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Cross-shell prompt
+brew "starship"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Smart session manager for the terminal

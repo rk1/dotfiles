@@ -1,0 +1,36 @@
+# One-line prompt
+add_newline = false
+format = "$directory$character"
+right_format = "$git_branch${custom.git_dirty}$git_status$cmd_duration"
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+
+[character]
+success_symbol = "[λ](yellow)"
+error_symbol = "[λ](red)"
+vimcmd_symbol = "[λ](cyan)"
+
+[git_branch]
+format = "[<](green)[$branch]($style)"
+style = "red"
+
+# mrtazz-like git segment
+[custom.git_dirty]
+when = 'test -n "$(git status --porcelain --ignore-submodules -unormal 2>/dev/null)"'
+require_repo = true
+format = "[ ✗]($style)"
+style = "yellow"
+
+[git_status]
+format = "[>](green)( [$ahead_behind]($style))"
+style = "cyan"
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇡⇣"
+
+[cmd_duration]
+min_time = 5000
+format = " [$duration]($style)"
+style = "yellow"

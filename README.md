@@ -11,9 +11,11 @@ macOS configuration managed with GNU Stow.
 - [Homebrew](https://brew.sh)
 
 ```zsh
-git clone https://github.com/rk1/dotfiles.git ~/dotfiles
+git clone --recurse-submodules https://github.com/rk1/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
+
+Already cloned without `--recurse-submodules`? Run `git submodule update --init`.
 
 ### 2. Homebrew packages
 
@@ -35,19 +37,7 @@ stow zsh     # Only install Zsh config
 
 ### 4. Manual setup
 
-Homebrew and Stow don't cover everything. Run these after stowing.
-
-**oh-my-zsh** since `.zshrc` sources it. Install it without overwriting the stowed `.zshrc`:
-
-```zsh
-KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-```
-
-**zshmarks** is a directory-bookmark plugin, clone it into oh-my-zsh's custom plugins:
-
-```zsh
-git clone https://github.com/jocelynmallon/zshmarks.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zshmarks"
-```
+Homebrew and Stow don't cover everything.
 
 **tpm** is a tmux plugin manager. Clone it and then install the plugins with `prefix + I` inside tmux:
 
