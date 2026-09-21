@@ -39,9 +39,6 @@ vim.opt.diffopt:append("vertical")
 -- Clipboard settings
 vim.opt.clipboard = "unnamed"
 
--- Visual mode paste without overwriting register
-vim.keymap.set("v", "<leader>p", '"_dP')
-
 -- iskeyword settings
 vim.opt.iskeyword = "@,48-57,_,192-255,#,-"
 
