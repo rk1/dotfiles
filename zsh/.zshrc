@@ -7,7 +7,7 @@ setopt auto_cd auto_pushd interactive_comments complete_in_word always_to_end
 setopt hist_ignore_dups hist_ignore_space
 
 # completion
-fpath=(/opt/homebrew/share/zsh/site-functions ~/.zsh/zshmarks $fpath)
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 autoload -Uz compinit bashcompinit && compinit -C && bashcompinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -21,12 +21,8 @@ bindkey '^X' undo
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
-# zshmarks (git submodule)
-source ~/.zsh/zshmarks/zshmarks.plugin.zsh
-alias g="jump" l="showmarks" s="bookmark" d="deletemark"
-
 # zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd g)"
 
 # yazi: cd to the directory you quit in
 function y() {

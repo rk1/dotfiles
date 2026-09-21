@@ -11,11 +11,9 @@ macOS configuration managed with GNU Stow.
 - [Homebrew](https://brew.sh)
 
 ```zsh
-git clone --recurse-submodules https://github.com/rk1/dotfiles.git ~/dotfiles
+git clone https://github.com/rk1/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
-
-Already cloned without `--recurse-submodules`? Run `git submodule update --init`.
 
 ### 2. Homebrew packages
 
