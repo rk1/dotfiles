@@ -37,5 +37,5 @@ function y() {
 . ~/.aliases
 [ -f ~/.localrc ] && . ~/.localrc
 
-# prompt: starship (brew "starship"), config in ~/.config/starship.toml
+# starship
 eval "$(starship init zsh)"
