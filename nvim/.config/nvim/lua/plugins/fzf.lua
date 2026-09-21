@@ -20,14 +20,6 @@ return {
 					row = 1,
 				},
 			},
-			files = {
-				actions = {
-					["ctrl-i"] = function(selected, opts)
-						opts.fd_opts = opts.fd_opts and opts.fd_opts:match("--hidden") and "" or "--hidden --no-ignore"
-						fzf.files(opts)
-					end,
-				},
-			},
 		})
 
 		vim.keymap.set("n", "<C-f>", fzf.grep_project)

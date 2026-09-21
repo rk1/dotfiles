@@ -4,8 +4,6 @@ brew "cocoapods"
 brew "displayplacer"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
-# Simple, fast and user-friendly alternative to find
-brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Program for calculating and printing calendars
