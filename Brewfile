@@ -4,6 +4,8 @@ brew "cocoapods"
 brew "displayplacer"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Program for calculating and printing calendars
@@ -18,12 +20,12 @@ brew "htop"
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
-# Cross-shell prompt
-brew "starship"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Smart session manager for the terminal
 brew "sesh"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Opinionated Lua code formatter
