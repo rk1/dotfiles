@@ -23,8 +23,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefox$",
-                                            "^app\\.zen-browser\\.zen$"
+                                            "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -361,14 +360,13 @@
                         ]
                     },
                     {
-                        "description": "Firefox: Cmd+Enter -> Cmd+Shift+Enter (urlbar background tab)",
+                        "description": "Firefox: Cmd+Enter -> bg tab, dismiss urlbar, focus page",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefox$",
-                                            "^app\\.zen-browser\\.zen$"
+                                            "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -387,53 +385,6 @@
                                     },
                                     { "key_code": "escape" },
                                     { "key_code": "escape" }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Zen next/prev Tab",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^app\\.zen-browser\\.zen$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "close_bracket",
-                                        "modifiers": ["command", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^app\\.zen-browser\\.zen$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "open_bracket",
-                                        "modifiers": ["command", "shift"]
-                                    }
                                 ],
                                 "type": "basic"
                             }
@@ -520,8 +471,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefox",
-                                            "^app\\.zen-browser\\.zen$"
+                                            "^org\\.mozilla\\.firefox"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
