@@ -25,9 +25,6 @@ vim.keymap.set("n", "gp", ":e#<CR>")
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
--- Yank to end of line
-vim.keymap.set("n", "Y", "y$")
-
 -- Visual mode paste without overwriting register
 vim.keymap.set("v", "<leader>p", '"_dP')
 
