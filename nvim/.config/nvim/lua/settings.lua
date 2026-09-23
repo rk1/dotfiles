@@ -2,15 +2,11 @@
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
-vim.opt.hidden = true
 vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.cindent = true
-vim.opt.smartindent = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.autoindent = true
 vim.opt.modelines = 0
 vim.opt.fileformat = "unix"
 vim.opt.hlsearch = false
@@ -19,7 +15,6 @@ vim.opt.foldlevelstart = 99
 vim.opt.completeopt:remove("preview")
 vim.opt.backup = false
 vim.opt.writebackup = false
-vim.opt.incsearch = true
 
 -- Update time and messages
 vim.opt.updatetime = 300
