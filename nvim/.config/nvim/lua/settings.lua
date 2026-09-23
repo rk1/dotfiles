@@ -52,6 +52,6 @@ end
 local js_group = vim.api.nvim_create_augroup("JavaScriptSettings", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
 	group = js_group,
-	pattern = { "javascript", "javascript.jsx", "typescript", "typescript.tsx", "typescriptreact" },
+	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	callback = set_js_settings,
 })
