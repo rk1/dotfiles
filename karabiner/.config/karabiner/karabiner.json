@@ -335,6 +335,7 @@
                 }
             ],
             "name": "Default profile",
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
@@ -687,7 +688,6 @@
                 }
             ],
             "name": "Work",
-            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
