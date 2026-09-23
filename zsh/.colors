@@ -1,12 +1,3 @@
-if [[ $OSTYPE = darwin* ]]; then
-    export CLICOLOR=1
-    export LSCOLORS=dxfxcxdxbxegedabagacad
-    alias ls='ls -CFG'
-else
-    alias ls='ls --color=auto'
-    if [ -f ~/.dircolors ]; then
-        eval `dircolors ~/.dircolors`
-    else
-        eval `dircolors`
-    fi
-fi
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagacad
+alias ls='ls -F'
