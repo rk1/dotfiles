@@ -14,10 +14,10 @@ brew "gh"
 brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Smart session manager for the terminal
@@ -36,8 +36,6 @@ brew "tmux"
 brew "tree-sitter-cli"
 # Vi 'workalike' with many additional features
 brew "vim"
-# JavaScript toolchain manager for reproducible environments
-brew "volta"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever

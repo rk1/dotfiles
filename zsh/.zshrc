@@ -43,5 +43,8 @@ function y() {
 . ~/.aliases
 [ -f ~/.localrc ] && . ~/.localrc
 
+# mise for tool management
+eval "$(mise activate zsh)"
+
 # starship prompt, keep last
 eval "$(starship init zsh)"
