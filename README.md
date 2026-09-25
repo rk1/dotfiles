@@ -33,7 +33,15 @@ stow nvim    # Only install Neovim config
 stow zsh     # Only install Zsh config
 ```
 
-### 4. Manual setup
+### 4. Additional tools
+
+Install additional tools via mise:
+
+```zsh
+mise install
+```
+
+### 5. Manual setup
 
 Homebrew and Stow don't cover everything.
 
