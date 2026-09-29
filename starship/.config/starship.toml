@@ -2,6 +2,3 @@
 add_newline = false
 format = "$directory$character"
 right_format = "$git_branch$git_status"
-
-[git_status]
-stashed = ""
