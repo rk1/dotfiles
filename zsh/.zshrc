@@ -29,6 +29,9 @@ bindkey '^N' history-search-forward
 # zoxide
 eval "$(zoxide init zsh --cmd g)"
 
+# fzf colors from the terminal's palette
+export FZF_DEFAULT_OPTS='--inline-info --color=16,bg+:-1'
+
 # yazi: cd to the directory you quit in
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
