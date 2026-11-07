@@ -30,7 +30,7 @@ bindkey '^N' history-search-forward
 eval "$(zoxide init zsh --cmd g)"
 
 # fzf colors from the terminal's palette
-export FZF_DEFAULT_OPTS='--inline-info --color=16,bg+:-1'
+export FZF_DEFAULT_OPTS='--inline-info --color=16,bg+:-1,fg+:-1:bold'
 
 # yazi: cd to the directory you quit in
 function y() {
